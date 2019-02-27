@@ -1,0 +1,184 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,fieldset,iframe{
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style:none;
+}
+html,body{
+	width: 100%;
+	height:100%;
+}
+body{
+	background:url(../images/bg8.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	background-attachment:fixed;
+}
+.wrapper{
+	position:relative;
+	width:960px;
+	height:400px;
+	margin:100px auto;
+	border:2px solid red;
+}
+.wrapper ul{
+	position:relative;
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-items:center;
+}
+.wrapper li{
+	position:absolute;
+	width:480px;
+	height:300px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+}
+
+.wrapper .pic1{
+	transform:translate(-432px,-233px) scale(0.2);
+	-o-transform:translate(-432px,-233px) scale(0.2);
+	-moz-transform:translate(-432px,-233px) scale(0.2);
+	-o-transform:translate(-432px,-233px) scale(0.2);
+	-webkit-transform:translate(-432px,-233px) scale(0.2);
+	opacity:0;
+	z-index:1;
+}
+.wrapper .pic2{
+	transform:translate(-340px,-7px) scale(0.4);
+	-o-transform:translate(-340px,-7px) scale(0.4);
+	-moz-transform:translate(-340px,-7px) scale(0.4);
+	-o-transform:translate(-340px,-7px) scale(0.4);
+	-webkit-transform: translate(-340px,-7px) scale(0.4);
+	opacity:0.2;
+	z-index:2;
+}
+.wrapper .pic3{
+	transform:translate(-228px,-7px) scale(0.6);
+	-o-transform:translate(-228px,-7px) scale(0.6);
+	-moz-transform:translate(-228px,-7px) scale(0.6);
+	-o-transform:translate(-228px,-7px) scale(0.6);
+	-webkit-transform: translate(-228px,-7px) scale(0.6);
+	opacity:0.2;
+	z-index:3;
+}
+.wrapper .pic4{
+	transform:translate(-110px,-7px) scale(0.8);
+	-o-transform:translate(-110px,-7px) scale(0.8);
+	-moz-transform:translate(-110px,-7px) scale(0.8);
+	-o-transform:translate(-110px,-7px) scale(0.8);
+	-webkit-transform: translate(-110px,-7px) scale(0.8);
+	opacity:0.2;
+	z-index:4;
+}
+.wrapper .pic5{
+	transform:translate(0,0) scale(1);
+	-o-transform:translate(0,0) scale(0.8);
+	-moz-transform:translate(0,0) scale(1);
+	-o-transform:translate(0,0) scale(1);
+	-webkit-transform: translate(0,0) scale(1);
+	opacity:1;
+	z-index:5;
+}
+.wrapper .pic6{
+	transform:translate(110px,-7px) scale(0.8);
+	-o-transform:translate(110px,-7px) scale(0.8);
+	-moz-transform:translate(110px,-7px) scale(0.8);
+	-o-transform:translate(110px,-7px) scale(0.8);
+	-webkit-transform: translate(110px,-7px) scale(0.8);
+	opacity:0.2;
+	z-index:4;
+}
+.wrapper .pic7{
+	transform:translate(228px,-7px) scale(0.6);
+	-o-transform:translate(228px,-7px) scale(0.6);
+	-moz-transform:translate(228px,-7px) scale(0.6);
+	-o-transform:translate(228px,-7px) scale(0.6);
+	-webkit-transform: translate(228px,-7px) scale(0.6);
+	opacity:0.2;
+	z-index:3;
+}
+
+.wrapper .pic8{
+	transform:translate(340px,-7px) scale(0.4);
+	-o-transform:translate(340px,-7px) scale(0.4);
+	-moz-transform:translate(340px,-7px) scale(0.4);
+	-o-transform:translate(340px,-7px) scale(0.4);
+	-webkit-transform: translate(340px,-7px) scale(0.4);
+	opacity:0.2;
+	z-index:2;
+}
+.wrapper .pic9{
+	transform:translate(432px,-233px) scale(0.2);
+	-o-transform:translate(432px,-233px) scale(0.2);
+	-moz-transform:translate(432px,-233px) scale(0.2);
+	-o-transform:translate(432px,-233px) scale(0.2);
+	-webkit-transform:translate(432px,-233px) scale(0.2);
+	opacity:0;
+	z-index:1;
+}
+.wrapper .controller{
+	position:absolute;
+	top:45%;
+	left:10%;
+	width:80%;
+	height:30px;
+	z-index:10;
+	cursor:pointer;
+}
+.wrapper .controller span{
+	position:absolute;
+	display:block;
+	width:30px;
+	height:30px;
+	opacity:0;
+	transition:all 0.5s ease;
+	-o-transition:all 0.5s ease;
+	-webkit-transition:all 0.5s ease;
+	-moz-transition:all 0.5s ease;
+	-ms-transition:all 0.5s ease;
+}
+.wrapper .controller .btn-left{
+	left:15%;
+	background:url(../images/arrow1.png) no-repeat center/cover;
+}
+.wrapper .controller .btn-right{
+	right:15%;
+	background:url(../images/arrow2.png) no-repeat center/cover;
+}
+
+.wrapper ul:hover +.controller .btn-left{
+	left:20%;
+	opacity:1;
+}
+.wrapper ul:hover +.controller .btn-right{
+	right:20%;
+	opacity:1;
+}
+.wrapper .controller:hover .btn-left{
+	left:20%;
+	opacity:1;
+}
+.wrapper .controller:hover .btn-right{
+	right:20%;
+	opacity:1;
+}
+#footer{
+	height: 150px;
+	width: 500px;
+	margin: 0 auto;
+	/*float: left;*/
+	font-size: 35px;
+	text-align: center;
+	line-height: 150px;
+	margin-top: 60px;
+	color: #ffffff;
+	background-color: rgba(00,00,00,.4);
+}
