@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>黑洞理论</title>
+    <link rel="stylesheet" href="css/chushihua.css">
+    <style>
+        body{
+            background:url("images/bg12.jpg");
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+            background-attachment:fixed;
+            position: relative;
+        }
+        /*header*/
+        #top{
+
+            top: 0;
+            height: 60px;
+            width: 100%;
+
+        }
+        #logo{
+
+            width: 200px;
+            height:60px;
+            margin: 10px 10px;
+            float: left;
+
+        }
+        #logo img{
+            margin-top: 6px;
+            margin-left: 0px;
+            opacity: 1;
+            float:left;
+        }
+        #logo p{
+            float:right;
+            color:white;
+            margin-right: 10px;
+            font-size: 15px;
+            margin-top: 10px;
+            height: 18px;
+            opacity: 1;
+        }
+        #header{
+
+            width: 850px;
+            height:60px;
+            margin: 10px 10px;
+            float: left;
+        }
+        #nav img{
+            float: left;
+            opacity: 1;
+        }
+        #nav li{
+
+            width:80px;
+            float:left;
+            margin-right: 25px;
+            margin-top: 14px;
+
+        }
+        #nav li a{
+            font-size: 18px;
+            line-height: 28px;
+            font-family: '微软雅黑';
+            color:white;
+            display: block;
+            height:40px;
+            width:80px;
+            opacity: 1;
+            text-decoration: none;
+        }
+        #nav a:hover{
+            color:#A8A5A5;
+            font-weight:bold ;
+
+        }
+        #signin{
+            /*background: white;*/
+            width: 150px;
+            height:60px;
+            margin-left: 30px;
+            margin-top: 10px;
+            float:left;
+
+        }
+        #signin .sign{
+            font-size: 20px;
+            float: left;
+            height: 40px;
+            width: 60px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #signin .sign:hover{
+            transform: scale(1.1);
+            opacity: 0.7;
+        }
+
+        #signin #l{
+            background-color: white;
+            color: #000000;
+        }
+
+        #signin #r{
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /*header*/
+
+        /*main*/
+        /*轮播图*/
+
+        .slider{
+            width: 950px;
+            height: 535px;
+            position: relative;
+            margin: 30px auto;
+            /*background-color: red;*/
+            overflow: hidden;
+        }
+
+        .slider_scroll{
+            width: 950px;
+            height: 500px;
+            position: relative;
+        }
+
+        .slider_main{
+            width: 1900px;
+            height: 500px;
+            background-color: black;
+        }
+
+        .slider_main_img{
+            width: 950px;
+            height: 500px;
+            position: absolute;
+        }
+
+        .slider_main_img img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider_ctl{
+            cursor: pointer;
+        }
+        .slider_ctl_prev,.slider_ctl_next{
+            /*background: #fff;*/
+            /*width: 30px;*/
+            /*height: 30px;*/
+            border: 15px solid #fff;
+            border-radius: 50%;
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            margin-top: -35px;
+        }
+        .slider_ctl_prev{
+            left: 5px;
+
+        }
+
+        .slider_ctl_next{
+
+            background-position: -9px -45px;
+            right: 5px;
+        }
+
+        .slider_ctl_icon{
+            border:10px solid gray;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 7px 10px;
+
+            float: left;
+        }
+        .slider_ctl:nth-child(2){
+            margin-left: 400px;
+        }
+
+
+        .current{
+            border-color: #cccccc;
+        }
+        /*轮播图*/
+
+
+        #main{
+            width: 100%;
+            height: 2200px;
+            /*background-color: blue;*/
+            margin: 0 auto;
+            position: absolute;
+            top: 640px;
+        }
+        #main_left{
+            width: 64%;
+            height: 2150px;
+            float: left;
+            margin: 15px 10px;
+            /*background-color: gray;*/
+            border:1px solid #ffffff;
+        }
+
+        #main_left_header{
+            width: 98%;
+            height: 156px;
+            /*background-color: black;*/
+            float: left;
+            margin: 8px;
+        }
+        #main_left_header ul li{
+            width: 22%;
+            height: 140px;
+            background-color: #ffffff;
+            margin-left: 12px;
+            margin-top: 3px;
+            float: left;
+            border:4px solid #ffffff;
+            opacity:0.9;
+            filter: alpha(opacity=90);
+            border-radius: 4px;
+        }
+        #main_left_header ul li:hover{
+            transform: scale(1.05);
+
+        }
+        #main_left_header ul .selected{
+            opacity:1;
+            filter: alpha(opacity=100);
+        }
+        #main_left_header img{
+            width: 100%;
+            height: 100%;
+        }
+
+        #main_left_content{
+            width: 98%;
+            height: 1960px;
+            /*background-color: black;*/
+            border: 1px solid #ffffff;
+            float: left;
+            margin: 8px;
+            overflow: hidden;
+        }
+        .dom{
+            border: 1px solid #ffffff;
+            /*opacity: 0.2;*/
+        }
+
+        .dom .dom_banner{
+            height: 400px;
+            width: 96%;
+            border: 1px solid #ffffff;
+            margin: 15px auto;
+        }
+        .dom .dom_banner img{
+            height: 100%;
+            width: 100%;
+        }
+        .dom .dom_arti{
+            height: 1200px;
+            width: 96%;
+            border: 1px solid #ffffff;
+            margin: 15px auto;
+            overflow: scroll;
+            overflow-x: hidden;
+            /*background-color: #999999;*/
+        }
+        .dom .dom_arti h1{
+            font-size:25px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            color: #ffffff;
+            letter-spacing: 10px;
+        }
+        .dom .dom_arti button{
+            float: right;
+            font-size: 18px;
+            background-color: gray;
+            color: #ffffff;
+            margin-right: 20px;
+        }
+        .dom .dom_arti button:hover{
+            transform: scale(1.2);
+        }
+        .dom .dom_arti h2{
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 26px;
+            color: #BFBBBB;
+            letter-spacing: 6px;
+            text-align: left;
+            text-indent: 2em;
+        }
+        .dom .dom_arti p{
+            font-size: 12px;
+            line-height: 24px;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-align: justify;
+            padding:10px 20px;
+            text-indent: 2em;
+        }
+        .dom .dom_footer{
+            height: 300px;
+            width: 96%;
+            border: 1px solid #ffffff;
+            margin: 15px auto;
+        }
+        .dom .dom_footer .dom_footer_left{
+            height: 96%;
+            width: 25%;
+            margin: 5px 20px;
+            /*border: 1px solid #ffffff;*/
+            float: left;
+        }
+        .dom .dom_footer .dom_footer_left video{
+            height: 100%;
+            width: 100%;
+        }
+        .dom .dom_footer .dom_footer_right{
+            height: 96%;
+            width: 65%;
+            border: 1px solid #ffffff;
+            margin: 5px 10px;
+            float: left;
+        }
+        #dom1{
+            width: 100%;
+            height: 100%;
+            /*background-color: yellow;*/
+        }
+        #dom2{
+            width: 100%;
+            height: 100%;
+            /*background-color: green;*/
+        }
+        #dom3{
+            width: 100%;
+            height: 100%;
+            /*background-color: blue;*/
+        }
+        #dom4{
+            width: 100%;
+            height: 100%;
+            /*background-color: white;*/
+        }
+        .dom .dom_footer .dom_footer_right h1{
+            font-size:20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            letter-spacing: 10px;
+            color: #ffffff;
+        }
+        .dom .dom_footer .dom_footer_right li a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .dom .dom_footer .dom_footer_right li:hover{
+            transform: scale(1.1);
+        }
+        .dom .dom_footer .dom_footer_right li{
+            font-size:15px;
+            text-align: center;
+            line-height: 20px;
+            letter-spacing: 3px;
+            color: #ffffff;
+            height: 30px;
+            width: 96%;
+            margin: 5px auto;
+            float: left;
+
+        }
+
+        #main_right{
+            width: 32%;
+            height: 2150px;
+            float: right;
+            margin: 15px 10px;
+            /*background-color: gray;*/
+            border:1px solid #ffffff;
+        }
+        #main_right #tab{
+            width: 94%;
+            height: 270px;
+            /*border: 1px solid #ffffff;*/
+            margin: 25px 11px;
+            float: left;
+        }
+        #main_right  .main-header{
+            width: 100%;
+            height: 25px;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            color: #ffffff;
+        }
+        #main_right  #content #main-header{
+            margin-top: 12px;
+        }
+        #main_right  #main-footer #main-header2{
+            margin-top: 12px;
+        }
+        #main_right  #content .main_ul{
+            width: 96%;
+            height: 760px;
+            margin-top: 5px;
+            margin-left: 6px;
+            border: 1px solid #ffffff;
+            float: left;
+        }
+        #main_right  #content .main_ul li{
+            width: 70%;
+            height: 25px;
+            margin: auto;
+            font-size: 16px;
+            line-height: 25px;
+            margin-top: 24px;
+            text-align: center;
+        }
+        #main_right  #content .main_ul li a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        #main_right  #content li a:hover{
+            color:#cccccc;
+            font-size: 18px;
+        }
+        #main_right  #content  .ul_p{
+            width: 100%;
+            height: 25px;
+            font-size: 20px;
+            line-height: 25px;
+            margin-top: 24px;
+            text-align: center;
+            color: #BFBBBB;
+        }
+        hr{
+            width: 60%;
+            text-align: center;
+
+        }
+        #main_right #main-footer {
+            width: 96%;
+            height: 840px;
+            margin-top: 20px;
+            margin-left: 6px;
+            /*border: 1px solid #ffffff;*/
+            float: left;
+
+        }
+        #main_right #main-footer ul{
+            width: 96%;
+            height: 940px;
+            margin-top: 5px;
+            margin-left: 6px;
+            border: 1px solid #ffffff;
+            float: left;
+            overflow: scroll;
+            overflow-x:hidden;
+            /*overflow-y:hidden;*/
+
+        }
+        #main_right #main-footer li{
+            width: 60%;
+            height: 25px;
+            margin: auto;
+            font-size: 16px;
+            line-height: 25px;
+            margin-top: 24px;
+
+            text-align: center;
+        }
+        #main_right #main-footer li a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        #main_right #tab #tab-video{
+            width: 96%;
+            height: 210px;
+            margin-top: 15px;
+            margin-left: 6px;
+            border: 1px solid #ffffff;
+        }
+        #main_right #tab #tab-video .tab_video{
+            width: 100%;
+            height: 210px;
+            float: left;
+        }
+
+        #main_right #content{
+            width: 94%;
+            height: 1800px;
+            /*border: 1px solid #ffffff;*/
+            margin: 11px;
+            float: left;
+        }
+        /*main*/
+
+        /*footer*/
+        #footer{
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            top: 2840px;
+            margin: auto;
+            /*background-color: #fff;*/
+        }
+        #footer-l{
+
+            width: 340px;
+            height:60px;
+            margin-left: 20px;
+            margin-top: 10px;
+            float:left;
+        }
+        #footer-l h1{
+            font-size: 15px;
+            font-weight: bold;
+            margin: 15px 15px;
+            color: aliceblue;
+            float: left;
+            color: #ffffff;
+        }
+        #footer-r{
+
+            width: 240px;
+            height:60px;
+            margin-left: 20px;
+            margin-top: 10px;
+            float:right;
+        }
+        #footer-r h1{
+            font-size: 15px;
+            font-weight: bold;
+            margin: 15px 10px;
+            float: left;
+
+        }
+        .picture{
+            float:left;
+            margin-top: 10px;
+            margin-right: 15px;
+        }
+
+        #footer-l h1 a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        #footer-r h1 a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+        #footer-r h1 a,#footer-l h1 a:hover{
+            color: gray;
+        }
+        /*footer*/
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <!--header-->
+    <div id="top">
+        <div id="logo">
+            <a href="#"><img src="images/logo.png" width="95px" height="45px" alt="" />
+                <p>梦想点缀星空<br> 星空美化未来</p></a>
+        </div>
+        <div id="header">
+            <ul id="nav">
+                <img src="images/pic.png" alt="" width="85px" height="65px" />
+                <li><a href="index.html">首页</a><audio src="music/A%205.mp3"></audio></li>
+                <li><a href="navigation_kepu.html">宇宙科普</a><audio src="music/B%205.mp3"></audio></li>
+                <li><a href="navigation_star.html" >星球星系</a><audio src="music/C%205.mp3"></audio></li>
+                <li><a href="#" >黑洞理论</a><audio src="music/D%205.mp3"></audio></li>
+                <li><a href="navigation_outearth.html" >地外生命</a><audio src="music/E%205.mp3"></audio></li>
+                <li><a href="navigation_more.html" >最新时讯</a><audio src="music/F%205.mp3"></audio></li>
+                <li><a href="navigation_aboutme.html" >关于我们</a><audio src="music/G%205.mp3"></audio></li>
+            </ul>
+        </div>
+        <div id="signin">
+            <button id="l" class="sign">注册<audio src="music/tune.mp3"></audio></button>
+            <button id="r" class="sign">登录<audio src="music/tune.mp3"></audio></button>
+        </div>
+    </div>
+
+    <!--main-->
+    <div id="slider" class="slider">
+        <div id="slider_scroll" class="slider_scroll">
+            <div class="slider_main" id="slider_main">
+                <div class="slider_main_img"><a href=""><img src="images/nav_bh_banner1.jpg" width="950px" height="
+500px"></a></div>
+                <div class="slider_main_img"><a href=""><img src="images/nav_bh_banner2.jpg" width="950px" height="
+500px"></a></div>
+                <div class="slider_main_img"><a href=""><img src="images/nav_bh_banner3.jpg" width="950px" height="
+500px"></a></div>
+                <div class="slider_main_img"><a href=""><img src="images/nav_bh_banner4.jpg" width="950px" height="
+500px"></a></div>
+            </div>
+        </div>
+        <div class="slider_ctl" id="slider_ctl">
+            <span class="slider_ctl_prev"></span>
+
+            <span class="slider_ctl_next"></span>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="main_left">
+            <div id="main_left_header">
+                <ul>
+                    <li class="main_left_img selected" ><img src="images/header9.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                    <li class="main_left_img"><img src="images/header10.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                    <li class="main_left_img"><img src="images/header11.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                    <li class="main_left_img"><img src="images/header12.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                </ul>
+            </div>
+            <div id="main_left_content" style="background-color: rgba(00,00,00,.6)">
+                <div class="dom" id="dom1" style="display: block">
+                    <div class="dom_banner"><img src="images/bg11.jpg" alt=""></div>
+                    <div class="dom_arti" id="dom_arti">
+                        <h1>演化过程</h1>
+                        <button>阅读模式<audio src="music/tune.mp3"></audio></button>
+                        <p>黑洞就是中心的一个密度无限大、时空曲率无限高、体积无限小的奇点和周围一部分空空如也的天区，这个天区范围之内不可见。依据阿尔伯特-爱因斯坦的相对论，当一颗垂死恒星崩溃，它将聚集成一点，这里将成为黑洞，吞噬邻近宇宙区域的所有光线和任何物质。</p>
+                        <p>黑洞的产生过程类似于中子星的产生过程；某一个恒星在准备灭亡，核心在自身重力的作用下迅速地收缩，塌陷，发生强力爆炸。当核心中所有的物质都变成中子时收缩过程立即停止，被压缩成一个密实的星体，同时也压缩了内部的空间和时间。但在黑洞情况下，由于恒星核心的质量大到使收缩过程无休止地进行下去，中子本身在挤压引力自身的吸引下被碾为粉末，剩下来的是一个密度高到难以想象的物质。由于高质量而产生的力量，使得任何靠近它的物体都会被它吸进去。黑洞开始吞噬恒星的外壳，但黑洞并不能吞噬如此多的物质，黑洞会释放一部分物质，射出两道纯能量——γ射线。</p>
+                        <p>也可以简单理解：通常恒星的最初只含氢元素，恒星内部的氢原子时刻相互碰撞，发生聚变。由于恒星质量很大，聚变产生的能量与恒星万有引力抗衡，以维持恒星结构的稳定。由于聚变，氢原子内部结构最终发生改变，破裂并组成新的元素——氦元素，接着，氦原子也参与聚变，改变结构，生成锂元素。如此类推，按照元素周期表的顺序，会依次有铍元素、硼元素、碳元素、氮元素等生成，直至铁元素生成，该恒星便会坍塌。这是由于铁元素相当稳定，参与聚变时不释放能量，而铁元素存在于恒星内部，导致恒星内部不具有足够的能量与质量巨大的恒星的万有引力抗衡，从而引发恒星坍塌，最终形成黑洞。说它“黑”，是因为它的密度无穷大，从而产生的引力使得它周围的光都无法逃逸。跟中子星一样，黑洞也是由质量大于太阳质量好几倍以上的恒星演化而来的。</p>
+                        <p>当一颗恒星衰老时，它的热核反应已经耗尽了中心的燃料（氢），由中心产生的能量已经不多了。这样，它再也没有足够的力量来承担起外壳巨大的重量。所以在外壳的重压之下，核心开始坍缩，物质将不可阻挡地向着中心点进军，直到最后形成体积接近无限小、密度几乎无限大的星体。而当它的半径一旦收缩到一定程度（一定小于史瓦西半径），质量导致的时空扭曲就使得即使光也无法向外射出——“黑洞”就诞生了。</p>
+                        <h2>吸积</h2>
+                        <p>黑洞通常是因为它们聚拢周围的气体产生辐射而被发现的，这一过程被称为吸积。高温气体辐射热能的效率会严重影响吸积流的几何与动力学特性。观测到了辐射效率较高的薄盘以及辐射效率较低的厚盘。当吸积气体接近中央黑洞时，它们产生的辐射对黑洞的自转以及视界的存在极为敏感。对吸积黑洞光度和光谱的分析为旋转黑洞和视界的存在提供了强有力的证据。数值模拟也显示吸积黑洞经常出现相对论喷流也部分是由黑洞的自转所驱动的。</p>
+                        <p>通常天体物理学家会用“吸积”这个词来描述物质向中央引力体或者是中央延展物质系统的流动。吸积是天体物理中最普遍的过程之一，而且也正是因为吸积才形成了我们周围许多常见的结构。在宇宙早期，当气体朝由暗物质造成的引力势阱中心流动时形成了星系。即使到了今天，恒星依然是由气体云在其自身引力作用下坍缩碎裂，进而通过吸积周围气体而形成的。行星（包括地球）也是在新形成的恒星周围通过气体和岩石的聚集而形成的。当中央天体是一个黑洞时，吸积就会展现出它最为壮观的一面。黑洞除了吸积物质之外，还通过霍金蒸发过程向外辐射粒子。</p>
+                        <h2>蒸发</h2>
+                        <p>由于黑洞的密度极大，根据公式我们可以知道密度=质量/体积，为了让黑洞密度无限大，那就说明黑洞的体积要无限小，然后质量要无限大，这样才能成为黑洞。黑洞是由一些恒星“灭亡”后所形成的死星，它的质量极大，体积极小。但黑洞也有灭亡的那天，按照霍金的理论，在量子物理中，有一种名为“隧道效应”的现象，即一个粒子的场强分布虽然尽可能让能量低的地方较强，但即使在能量相当高的地方，场强仍会有分布，对于黑洞的边界来说，这就是一堵能量相当高的势垒，但是粒子仍有可能出去。</p>
+                        <p>霍金还证明，每个黑洞都有一定的温度，而且温度的高低与黑洞的质量成反比例。也就是说，大黑洞温度低，蒸发也微弱；小黑洞的温度高蒸发也强烈，类似剧烈的爆发。相当于一个太阳质量的黑洞，大约要1后面66个0年才能蒸发殆尽；相当于一颗小行星质量的黑洞会在1小数点后面21个0加1012秒内蒸发得干干净净。</p>
+                        <h2>毁灭</h2>
+                        <p>黑洞会发出耀眼的光芒，体积会缩小，甚至会爆炸。当英国物理学家史蒂芬·霍金于1974年做此预言时，整个科学界为之震动。霍金的理论是受灵感支配的思维的飞跃，他结合了广义相对论和量子理论，他发现黑洞周围的引力场释放出能量，同时消耗黑洞的能量和质量。</p>
+                        <p>假设一对粒子会在任何时刻、任何地点被创生，被创生的粒子就是正粒子与反粒子，而如果这一创生过程发生在黑洞附近的话就会有两种情况发生：两粒子湮灭、一个粒子被吸入黑洞。“一个粒子被吸入黑洞”这一情况：在黑洞附近创生的一对粒子其中一个反粒子会被吸入黑洞，而正粒子会逃逸，由于能量不能凭空创生，我们设反粒子携带负能量，正粒子携带正能量，而反粒子的所有运动过程可以视为是一个正粒子的为之相反的运动过程，如一个反粒子被吸入黑洞可视为一个正粒子从黑洞逃逸。这一情况就是一个携带着从黑洞里来的正能量的粒子逃逸了，即黑洞的总能量少了，而爱因斯坦的公式E=mc^2表明，能量的损失会导致质量的损失。</p>
+                        <p>当黑洞的质量越来越小时，它的温度会越来越高。这样，当黑洞损失质量时，它的温度和发射率增加，因而它的质量损失得更快。这种“霍金辐射”对大多数黑洞来说可以忽略不计，因为大黑洞辐射的比较慢，而小黑洞则以极高的速度辐射能量，直到黑洞的爆炸。</p>
+                        <h1>专家研究</h1>
+                        <h2>等离子体</h2>
+                        <p>德国马克斯普朗克核物理研究所和赫尔姆霍茨柏林中心的研究人员使用柏林同步加速器（BESSY Ⅱ）在实验室成功产生了黑洞周边的等离子体。通过该研究，之前只能在太空由人造卫星执行的天文物理实验，也可以在地面进行，诸多天文物理学难题有望得到解决。黑洞的重力很大，会吸附一切物质。进入黑洞后，任何东西都不可能从黑洞的边界之内逃逸出来。随着被吸入的物体的温度不断升高，会产生核与电子分离的高温等离子体。</p>
+                        <p>黑洞吸附物质会产生X射线，X射线反过来又会刺激其中的大量化学元素发射出具有独特线条（颜色）的X射线。分析这些线条可以帮助科学家了解更多有关黑洞附近等离子体的密度、速度和组成成分等信息。在这个过程中，铁起了非常关键的作用。尽管铁在宇宙中的储量并不如更轻的氢和氦丰富，但是，它能够更好地吸收和重新发射出X射线，发射出的光子因此也比其他更轻的原子发射出的光子具有更高的能量、更短的波长（使得其具有不同的颜色）。</p>
+                        <p>铁发射出的X射线在穿过黑洞周围的介质时也会被吸收。在这个所谓的光离化过程中，铁原子通常会经历几次电离，其包含的26个电子中有超过一半会被去除，最终产生带电离子，带电离子聚集成为等离子体，研究人员可以在实验室中重现了这个过程。实验的核心是马克斯普朗克核物理研究所设计的电子束离子阱。在这个离子阱中，铁原子经由一束强烈的电子束加热，从而被离子化14次。实验过程如下：一团铁离子（仅仅几厘米长并且像头发丝一样薄）在磁场和电场的作用下被悬停在一个超高真空内，同步加速器发射出的X射线的光子能量被一台精确性超高的“单色仪”挑选出来，作为一束很薄但却集中的光束施加到铁离子上。</p>
+                        <p>实验室测量到的光谱线与钱德拉X射线天文台和牛顿X射线多镜望远镜所观测的结果相匹配。也就是说，研究人员在地面实验室人为制造出了太空中的黑洞等离子体。这种新奇的方法将带电离子的离子阱和同步加速器辐射源结合在一起，让人们可以更好地了解黑洞周围的等离子体或者活跃的星系核。研究人员希望，将EBIT分光检查镜和更清晰的第三代（2009年开始在德国汉堡运行的同步辐射源PETRAⅢ）、第四代（X射线自由电子激光XFEL）X射线源结合，将能够给该研究领域带来更多新鲜活力。</p>
+                        <h2>人造黑洞</h2>
+                        <p>美国制成“人造黑洞”<br>
+                            2005年3月，美国布朗大学物理教授‘霍拉蒂·纳斯塔西’在地球上制造出了第一个“人造黑洞“。美国纽约布鲁克海文实验室1998年建造了20世纪全球最大的粒子加速器，将金离子以接近光速对撞而制造出高密度物质。虽然这个黑洞体积很小，却具备真正黑洞的许多特点。纽约布鲁克海文国家实验室里的相对重离子碰撞机，可以以接近光速的速度把大型原子的核子（如金原子核子）相互碰撞，产生相当于太阳表面温度3亿倍的热能。纳斯塔西在纽约布鲁克海文国家实验室里利用原子撞击原理制造出来的灼热火球，具备天体黑洞的显著特性。比如：火球可以将周围10倍于自身质量的粒子吸收，这比所有量子物理学所推测的火球可吸收的粒子数目还要多。</p>
+                        <p>人造黑洞的设想最初由加拿大“不列颠哥伦比亚大学”的威廉·昂鲁教授在20世纪80年代提出，他认为声波在流体中的表现与光在黑洞中的表现非常相似，如果使流体的速度超过声速，那么事实上就已经在该流体中建立了一个人造黑洞。然而，利昂哈特博士打算制造的人造黑洞由于缺乏足够的引力，除了光线外，它们无法像真正的黑洞那样“吞下周围的所有东西”。然而，纳斯塔西教授制造的人造黑洞已经可以吸收某些其他物质。因此，这被认为是黑洞研究领域的重大突破。</p>
+                        <p>欧洲“人造黑洞”<br>
+                            2008年9月10日，随着第一束质子束流贯穿整个对撞机，欧洲大型强子对撞机正式启动。</p>
+                        <p>欧洲大型强子对撞机是2013年前世界上最大、能量最高的粒子加速器，是一种将质子加速对撞的高能物理设备，它位于瑞士日内瓦近郊欧洲核子研究组织CERN的粒子加速器与对撞机，作为国际高能物理学研究之用。系统第一负责人是英国著名物理学家‘林恩·埃文斯’，大型强子对撞机最早就是由他设想出来并主导制造的，被外界称为“埃文斯原子能”。</p>
+                        <p>当比我们的太阳更大的特定恒星在生命最后阶段发生爆炸时，自然界就会形成黑洞。它们将大量物质浓缩在非常小的空间内。假设在大型强子对撞机内的质子相撞产生粒子的过程中，形成了微小黑洞，每个质子拥有的能量可跟一只飞行中的蚊子相当。天文学上的黑洞比大型强子对撞机能产生的任何东西的质量更重。据爱因斯坦的相对论描述的重力性质，大型强子对撞机内不可能产生微小黑洞。然而一些纯理论预言大型强子对撞机能产生这种粒子产品。所有这些理论都预测大型强子对撞机产生的此类粒子会立刻分解。因此它产生的黑洞将没时间浓缩物质，产生肉眼可见的结果。</p>
+                        <h2>质量测定</h2>
+                        <p>中科院国家天文台研究员刘继峰领导的国际团队在世界上首次成功测量到X射线极亮天体的黑洞质量，在该领域获得重大突破，将增进人们对黑洞及其周围极端物理过程的认识。该研究成果2013年11月28日发表在国际权威杂志《自然》上。20世纪90年代以来，天文学家陆续在遥远星系中发现了一批X射线光度极高的天体，它们可能是人们一直寻找的中等质量黑洞，也可能是具有特殊辐射机制的几个或几十个太阳质量的恒星级黑洞。国际天文和天体物理界对此一直难以定论。由于这类天体距离我们十分遥远，通常为几千万光年，同时X射线照射黑洞吸积盘而产生的光污染也非常强，因此测量极其困难。</p>
+                        <p>刘继峰团队选取有特色的天体目标，成功申请到位于美国夏威夷的8米大型双子望远镜以及10米凯克望远镜各20小时的观测时间，在3个月的时间跨度上对漩涡星系中X射线极亮源M101ULX－1进行了研究，并确认其中心天体为一个质量与恒星可比拟的黑洞。这个黑洞加伴星形成的黑洞双星系统位于2200万光年之外。</p>
+                        <h2>不存在</h2>
+                        <p>黑洞这一定义在经过漫长的时间推测后，已经慢慢被人们所接受。然而在2014年1月24日，英国著名科学家斯蒂芬·霍金教授再次以其与黑洞有关的理论震惊物理学界。他在日前发表的一篇论文中承认，黑洞其实是不存在的，不过“灰洞”的确存在。在其这篇名为《Information Preservation and Weather Forecasting For Black Holes》的论文中，霍金指出，由于找不到黑洞的边界，因此黑洞是不存在的。黑洞的边界又称“视界”。经典黑洞理论认为，黑洞外的物质和辐射可以通过视界进入黑洞内部，而黑洞内的任何物质和辐射均不能穿出视界。</p>
+                        <p>霍金的最新“灰洞”理论认为，物质和能量在被黑洞困住一段时间以后，又会被重新释放到宇宙中。他在论文中承认，自己最初有关视界的认识是有缺陷的，光线其实是可以穿越视界的。当光线逃离黑洞核心时，它的运动就像人在跑步机上奔跑一样，慢慢地通过向外辐射而收缩。</p>
+                        <h2>黑洞炸弹</h2>
+                        <p>2001年1月，英国圣安德鲁大学著名理论物理科学家乌尔夫·利昂哈特宣布他和其他英国科研人员将在实验室中制造出一个黑洞，当时没有人对此感到惊讶。然而俄《真理报》日前披露俄罗斯科学家的预言：黑洞不仅可以在实验室中制造出来，而且50年后，具有巨大能量的“黑洞炸弹”将使如 今人类谈虎色变的“原子弹”也相形见绌。</p>
+                        <p>人造黑洞的设想由威廉·昂鲁教授提出，他认为声波在流体中的表现与光在黑洞中的表现非常相似，如果使流体的速度超过音速，那么事实上就已经在该流体中建立了一个人造黑洞现象。但利昂哈特博士打算制造的人造黑洞由于缺乏足够的引力，除了光线外，无法像真正的黑洞那样“吞下周围的所有东西”。</p>
+                        <p>俄罗斯科学家亚力克山大·特罗菲蒙科认为，能吞噬万物的真正宇宙黑洞也完全可以通过实验室“制造出来”：一个原子核大小的黑洞，它的能量将超过一家核工厂。如果人类有一天真的制造出黑洞炸弹，那么一颗黑洞炸弹爆炸后产生的能量，将相当于数颗原子弹同时爆炸，它至少可以造成10亿人死亡。”</p>
+                        <h2>捕捉星云</h2>
+                        <p>2011年12月，一个国际研究小组利用欧洲南方天文台的“甚大望远镜”，发现一个星云正在靠近位于银河系中央的黑洞并将被其吞噬。这是天文学家首次观测到黑洞“捕捉”星云的过程。观测显示，这个星云的质量约是地球的3倍，它的位置来逐渐靠近“人马座A星”黑洞。这个黑洞的质量约是太阳的400万倍，是距离我们最近的大型黑洞。研究人员分析认为，到2013年，这个星云将离黑洞非常近，有可能被黑洞逐渐吞噬。</p>
+                        <p>另外，黑洞并不是实实在在的星球，而是一个几乎空空如也的天区。黑洞又是宇宙中物质密度最高的地方，地球如果变成黑洞，只有一颗黄豆那么大。原来，黑洞中的物质不是平均分布在这个天区的，而是集中在天区的中心。这个中心具有极强的引力，任何物体只能在这个中心外围游弋。一旦不慎越过边界，就会被强大的引力拽向中心，最终化为粉末，落到黑洞中心。因此，黑洞是一个名副其实的太空魔王。</p>
+                        <p>黑洞内部只有三个物理量有意义：质量、电荷、角动量。</p>
+                        <h2>黑洞无毛</h2>
+                        <p>1973年霍金、卡特尔（B. Carter）等人严格证明了“黑洞无毛定理”：“无论什么样的黑洞，其最终性质仅由几个物理量（质量、角动量、电荷）惟一确定”。即当黑洞形成之后，只剩下这三个不能变为电磁辐射的守恒量，其他一切信息（“毛发”）都丧失了，黑洞几乎没有形成它的物质所具有的任何复杂性质，对前身物质的形状或成分都没有记忆。 于是“黑洞”的术语发明家惠勒戏称这特性为“黑洞无毛”。</p>
+                        <p>对于物理学家来说，一个黑洞或一块方糖都是极为复杂的物体，因为对它们的完整描述，即包括它们的原子和原子核结构在内的描述，需要有亿万个参量。与此相比，一个研究黑洞外部的物理学家就没有这样的问题。黑洞是一种极其简单的物体，如果知道了它的质量、角动量和电荷，也就知道了有关它的一切。黑洞几乎不保持形成它的物质所具有的任何复杂性质。它对前身物质的形状或成分都没有记忆，它保持的只是质量、角动量、电荷。消繁归简或许是黑洞最基本的特征。有关黑洞的大多数术语的发明家约克·惠勒，在60年前把这种特征称为“黑洞无毛”。</p>
+                        <h2>宇宙黑洞</h2>
+                        <p>美国天文学家发现了一个源自127亿年前的黑洞，不过这个黑洞距离地球非常遥远，它是在宇宙大爆炸之后的1亿年形成的。但是令所有科学家迷惑的是，是什么力量让这个宇宙黑洞在这么“短”的时间内就形成了这么大质量的黑洞的？这个宇宙黑洞是目前全世界发现的最古老的，已经有天文科学家把它命名为了Q0906+6930，它的质量几乎达到了整个银河系下的恒星质量之和，而它的容量几乎可以装下1000个太阳系。这个黑洞仅仅比宇宙晚形成那么几亿年“而已”，像它这样大容量的黑洞，又这么的古老，真的非常罕见。</p>
+                        <p>宇宙黑洞只是一个模糊的概念，它既看不到也摸不到，只能通过X射线和伽马射线来确定它的存在和测量它的体积和质量。但是对于这个宇宙黑洞的数据都是估量值，现在已经有一些天文专家准备利用它周围的天体的X射线和伽玛射线来精确测量它的精确数据。类似天体白洞是广义相对论所预言的一种与黑洞相反的特殊天体。和黑洞类似，白洞也有一个封闭的边界，聚集在白洞内部的物质，只能经边界向外运动，而不能反向运动，就是说白洞只向外部输出物质和能量。白洞是一个强引力源，能把它周围的物质吸积到边界上形成物质层。但白洞还是一种理论模型，尚未被观测所证实。</p>
+                    </div>
+                    <div class="dom_footer" style="background-color: rgba(00,00,00,.4)">
+                        <div class="dom_footer_left"><video src="video/video3.mp4" controls></video></div>
+                        <div class="dom_footer_right">
+                            <h1>推荐书籍——在线阅读</h1>
+                            <ul>
+                                <li><a href="pdf/yuhzoujianshi.pdf">宇宙简史——霍金</a></li>
+                                <li><a href="pdf/shijianjianshi.pdf">时间简史：图解</a></li>
+                                <li><a href="pdf/dabaozha.pdf">大爆炸探秘</a></li>
+                                <li><a href="pdf/21tianwenxue.pdf">21世纪天文学</a></li>
+                                <li><a href="pdf/jijianyuzhou.pdf">极简宇宙</a></li>
+                                <li><a href="pdf/yanshenyuzhou.pdf">延伸的宇宙</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dom" id="dom2">
+                    <div class="dom_banner"><img src="images/nav_kepu_banner3.jpg" alt=""></div>
+                    <div class="dom_arti">
+                        <h1>白洞</h1>
+                        <p>广义相对论所预言的一种性质正好与黑洞相反的特殊天体。白洞目前还仅是一种理论模型，但尚未被观测所证实。按照白洞理论，白洞和黑洞相似，也有一个封闭的边界。聚集在白洞内的物质，只可以经边界向外运动，而不能反向运动。因此这种天体外面的物质不能进入。</p>
+                        <p>白洞是宇宙中的喷射源，可以向外部区域提供物质和能量，但不能吸收外部区域的任何物质和辐射，所以白洞是一个只发射、不吸收的特殊宇宙天体，与黑洞正好相反。白洞是一个强引力源，其外部引力性质均与黑洞相同，白洞可以把它周围的物质吸积到边界上形成物质层。白洞理论主要可用来解释一些高能天体现象。</p>
+                        <p>根据白洞理论，有人认为类星体的核心可能是一个白洞。当白洞内超密态物质向外喷射时，就会同它周围的物质发生猛烈的碰撞，从而释放出巨大能量。由此推断，有些X射线、宇宙线、射电爆发、射电双源等现象，可能会与白洞的这种效应有关。白洞的力是排斥力与黑洞的吸引力相反的力。</p>
+                        <h2>原理</h2>
+                        <p>由于白洞周围具有很强的引力场，它把附近的尘埃、气体和辐射吸引到边界上来，产生很高的加速度，从而与从白洞内高速向外喷射的物质微粒相碰撞，产生巨大的能量辐射。X射线、宇宙射线、射电爆发及双射电源等高能现象，都可看成是白洞与其周围吸积物质相互作用的结果。用白洞模型解释宇宙背景X射线和γ射线的来源，也得到了与观测结果相近的能谱。</p>
+                        <p>白洞内膨胀物质所发出的辐射具有紫移特征，尤其在最初膨胀阶段，这种紫移表现得特别明显。对于白洞的起源，一种看法认为，白洞内的超密物质由引力塌缩形成黑洞时获得，它们经过某种内部的矛盾运动，转变成膨胀状态，而又从中心奇点向外抛射出来;比较流行的看法认为，白洞来源于整个宇宙的大爆炸。当宇宙由超高密态爆炸时，由于爆炸的不均匀性，有些超密态物质在抛出后仍处于奇点状态，它们可以等待一定的时间以后才开始膨胀和爆发，而成为新的局部膨胀核心。有些核心的爆发时间已延迟了10年(10000000000年，合100亿年)左右，它们一旦爆发就形成了今天所能观察到的类星体或其他高能天体，故白洞又称为"延迟核"。随着宇宙学的发展，人们将进一步揭开它的奥秘。</p>
+                        <h2>性质</h2>
+                        <p>从定义上来说，白洞与黑洞是物理学家们根据黑洞在爱因斯坦的广义相对论上所提出的"假想"物体，或一种数学模型。物理学界和天文学界将白洞定义为一种超高度致密物体，其性质与黑洞完全相反。白洞并不是吸收外部物质，而是不断地向外围喷射各种星际物质与宇宙能量，是一种宇宙中的喷射源。简单来说，白洞可以说是时间呈现反转的黑洞，进入黑洞的物质，最后应会从白洞出来，出现在另外一个宇宙。由于具有和"黑"洞完全相反的性质，所以叫做"白"洞;又因为黑洞的引力使得光也无法逃脱，而白洞和黑洞是完全相反的(连光也会被排斥掉)，所以呈现为白色，叫做白洞。它有一个封闭的边界,聚集在白洞内部的物质，只可以向外运动，而不能向内部运动。因此，白洞可以向外部区域提供物质和能量，但不能吸收外部区域的任何物质和辐射。白洞是一个强引力源，其外部引力性质与黑洞相同。</p>
+                        <p>在量子力学中，黑洞发出霍金辐射，因此可以通过辐射气体达到热平衡(不是强制性的)。由于热平衡态是时间反转不变量，Stephen Hawking认为热平衡黑洞的时间反转仍然是热平衡中的黑洞，这可能意味着黑洞和白洞是同一物体。从一个普通的黑洞发出的霍金辐射可以通过白洞的辐射得到确认。</p>
+                        <p>白洞可以把它周围的物质吸积到边界上形成物质层。白洞学说主要用来解释一些高能天体现象。当前天文学家还没有实际找到白洞，还只是个理论上的名词。白洞是理论上通过对黑洞的类比而得到的一个十分"学者化"的理论产物，更多的表现为一种数学模型。</p>
+                        <p>和黑洞完全不一样，白洞不会吸收任何物体，相反的，白洞会不断释放出物质，包括基本粒子和场。</p>
+                        <p>白洞和黑洞一样，有一个封闭的"视界"。不过和黑洞不一样，时空曲率在这里是负无穷大，也就是说，在这里，白洞对外界的斥力达到无穷大，即使是光笔直向白洞的奇点冲去，会被其弹回，所以它不可能进入白洞一步。</p>
+                        <p>理论上，白洞也可以根据是否旋转，是否带有电荷而区分类型，但是理论物理学家们认为，白洞的无穷大的斥力会迫使白洞不带有任何电荷，因为电荷很容易就被赶到了视界外。而旋转，也被认为是不可能的。不过白洞看来只可能是一种想象中的产物。因为如果白洞不吸收任何物体而仅仅是喷射物质(能量)，那么无论这个白洞的质量有多大，它的物质也会很快地被喷射光。</p>
+                        <p>当然，物理学家们也为白洞提供了几个存在的想法，其中有的人认为白洞和黑洞通过虫洞连接，从而使母宇宙和婴儿宇宙之间获得联系。</p>
+                        
+                    </div>
+                    <div class="dom_footer">
+                        <div class="dom_footer_left"></div>
+
+                        <div class="dom_footer_right">
+                            <h1>推荐书籍——在线阅读</h1>
+                            <ul>
+                                <li><a href="pdf/yuhzoujianshi.pdf">宇宙简史——霍金</a></li>
+                                <li><a href="pdf/shijianjianshi.pdf">时间简史：图解</a></li>
+                                <li><a href="pdf/dabaozha.pdf">大爆炸探秘</a></li>
+                                <li><a href="pdf/21tianwenxue.pdf">21世纪天文学</a></li>
+                                <li><a href="pdf/jijianyuzhou.pdf">极简宇宙</a></li>
+                                <li><a href="pdf/yanshenyuzhou.pdf">延伸的宇宙</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dom" id="dom3">
+                    <div class="dom_banner"><img src="images/bg9.jpg" alt=""></div>
+                    <div class="dom_arti">
+                        <h1>虫洞</h1>
+                        <h2>虫洞来源</h2>
+                        <p>虫洞的概念最初产生于对史瓦西解的研究中。物理学家在分析白洞——黑洞的相反物理量子解的时候，通过一个阿尔伯特·爱因斯坦的思想实验，发现宇宙时空自身可以不是平坦的。如果恒星形成了黑洞，那么时空在史瓦西半径，也就是视界的地方与原来的时空垂直。在不平坦的宇宙时空中，这种结构就意味着黑洞视界内的部分会与宇宙的另一个部分相结合，然后在那里产生一个洞。这个洞可以是黑洞，也可以是白洞。而这个弯曲的视界，就叫做史瓦西喉，它就是一种特定的虫洞。</p>
+                        <p>自从在史瓦西解中发现了虫洞，物理学家们就开始对虫洞的性质发生了兴趣。虫洞连接黑洞和白洞，在黑洞与白洞之间传送物质。在这里，虫洞成为一个阿尔伯特·爱因斯坦—罗森桥，物质在黑洞的奇点处被完全瓦解为基本粒子，然后通过这个虫洞（即阿尔伯特·爱因斯坦—罗森桥）被传送到白洞并且被辐射出去。突然出现的超时空管道。理论推出的虫洞还有许多特性，限于篇幅，这里不再赘述。</p>
+                        <p>总之，目前我们对黑洞、白洞和虫洞的本质了解还很少，它们还是神秘的东西，很多问题仍需要进一步探讨。目前天文学家已经间接地找到了黑洞，但白洞、虫洞并未真正发现，还只是一个经常出现在科幻作品中的理论名词。</p>
+                        <p>虫洞也是霍金构想的宇宙期存在的一种极细微的洞穴。美国科学家对此做了深入的研究。目前的宇宙中，“宇宙项”几乎为零。所谓的宇宙项也称为“真空的能量”，在没有物质的空间中，能量也同样存在其内部，这是由爱因斯坦所导入的。宇宙初期的膨胀宇宙，宇宙项是必须的，而且，在基本粒子论里，也认为真空中的能量是自然呈现的。那么，为何目前宇宙的宇宙项变为零呢？柯尔曼说明：在爆炸以前的初期宇宙中，虫洞连接着很多的宇宙，很巧妙地将宇宙项的大小调整为零。结果，由一个宇宙可能产生另一个宇宙，而且，宇宙中也有可能有无数个这种微细的洞穴，它们可通往一个宇宙的过去及未来，或其他的宇宙。</p>
+                        <p>旋转的或带有电荷的黑洞内部连接一个相应的白洞，你可以跳进黑洞而从白洞中跳出来。这样的黑洞和白洞的组合叫做虫洞。最后，即使虫洞存在并且是稳定的，穿过它们也是十分不愉快的。贯穿虫洞的辐射（来自附近的恒星，宇宙的微波背景等等）将蓝移到非常高的频率。当你试着穿越虫洞时，你将被这些X射线和伽玛射线烤焦。虫洞的出现，几乎可以说是和黑洞同时的。</p>
+                        <h2>产生机制</h2>
+                        <p>虫洞的自然产生机制有两种： 其一，是黑洞的强大引力能。 其二，是克尔黑洞的快速旋转，其伦斯——梯林效应将黑洞周围的能层中的时空撕开一些小口子。这些小口子在引力能和旋转能的作用下被击穿，成为一些十分小的虫洞。这些虫洞在黑洞引力能的作用下，可以确定它们的出口在那里，但是现在还不可能完全完成，因为量子理论和相对论还没有完全结合。</p>
+                        <p>个人假设</p>
+                        <p>1.虫洞像河流，通过的物体像船，船顺河而下。</p>
+                        <p>2.虫洞体像一个圆柱形磁铁，强力的类磁力线在入口处将通过的物体分解，以波的形式在柱心管道运行，在出口处还原。通过的物体类似一个障碍，造成波的某一部分形变，然后这个形变推移到出口。</p>
+                        <p>可能还涉及到横波、纵波，波的反射、折射、衍射，物质的不均匀、空间的不规则，如同水中气泡般的宇宙空洞。</p>
+                        <p>3.虫洞像一个圆柱形隧道，通过时间扭曲，把物体吸入里面，进行太空旅行。</p>
+                        <p>4.可以这么说，如果在一张纸的两边有两个点，将纸叠起来，相当于将空间与时间重叠，用笔穿过两个点所形成的洞就相当于虫洞，虫洞可以使时间缩短，但现实却会经历很长时间，国外就有这样的例子.</p>
+                        <h2>虫洞性质</h2>
+                        <p>利用相对论在不考虑一些量子效应和除引力以外的任何能量的时候，我们得到了一些十分简单、基本的关于虫洞的描述。这些描述十分重要，但是由于我们研究的重点是黑洞，而不是宇宙中的洞，因此我在这里只简单介绍一下虫洞的性质，而对于一些相关的理论以及这些理论的描述，这里先不涉及。</p>
+                        <p>虫洞有些什么性质呢？最主要的一个，是相对论中描述的，用来作为宇宙中的高速火车。但是，虫洞的第二个重要的性质，也就是量子理论告诉我们的东西又明确的告诉我们：虫洞不可能成为一个宇宙的高速火车。虫洞的存在，依赖于一种奇异的性质和物质，而这种奇异的性质，就是负能量。只有负能量才可以维持虫洞的存在，保持虫洞与外界时空的分解面持续打开。当然，狄拉克在芬克尔斯坦参照系的基础上，发现了参照系的选择可以帮助我们更容易或者难地来分析物理问题。同样的，负能量在狄拉克的另一个参照系中，是非常容易实现的，因为能量的表现形式和观测物体的速度有关。这个结论在膜规范理论中同样起到了十分重要的作用。根据参照系的不同，负能量是十分容易实现的。在物体以近光速接近虫洞的时候，在虫洞的周围的能量自然就成为了负的。因而以接近光速的速度可以进入虫洞，而速度离光速太大，那么物体是无论如何也不可能进入虫洞的。这个也就是虫洞的特殊性质之一。</p>
+                        <p>“虫洞”是广义相对论中出现的概念，是指宇宙中一种奇特的天体。尽管没有实验证据表明虫洞的真实存在，但科学家预测它以时空端点之间的捷径形式而存在，并想像虫洞连接着空洞的太空区域。然而，最新一项研究表明虫洞可能存在于遥远的恒星之间。它们并非时空隧道，虫洞中包含着接近完美程度的流体，可在两颗恒星之间来回流动，这种流体特征或许是证实虫洞存在的迹象。</p>
+                        <p>这项最新研究观点使科学家们置疑是否虫洞可能存在于不同的普通恒星和中子星。比如：那些正常的恒星和中子星。但它们可能一些能被探测到的差异特征。为了调查这些差异特征，研究人员设计了一个普通恒星中心带有通道的模型，宇宙物质可在该通道中穿行。两颗恒星共同分享一个虫洞将具有独特的连接性，这是由于虫洞具有两个通道口。</p>
+                        <p>由于虫洞中的奇特物质能够像恒星之间的液体一样流动，两颗恒星将出现不同寻常的脉动方式，这种脉动将释放不同类型的能量，比如：超强能量。</p>
+                        <p>科学家提出的两种虫洞，一个用于在我们所处的宇宙进行星际和星系际旅行，一个用于往返于不同宇宙之间。</p>
+                        <p>虫洞是一条可以进行时空穿梭的神奇隧道，让星际甚至星系际旅行不再是一个梦想。科学家认为虫洞极其不稳定，如果没有一种带有负能量的奇异物质让洞口保持张开状态，虫洞会在瞬间突然闭合。然而，根据德国和希腊物理学家进行的研究，虫洞无需借助这种奇异物质便可处于张开状态。这一研究发现意味着人类可能在将来的某一天在太空中发现虫洞。也许，一个先进程度远超过人类的文明已经借助虫洞构成的星系际地铁系统往返于不同星系之间，</p>
+                        <h2>相关理论</h2>
+                        <p>空间中的隧道，它就像一个球，你要是沿球面走就远了。但如果你走的是球里的一条直径就近了，虫洞就是直径。</p>
+                        <p>黑洞与白洞的联系。黑洞可以产生一个势阱，白洞则可以产生一个反势阱。宇宙是三维的，将势阱看作第四维，那么虫洞就是连接势阱和反势阱的第五维。假如画出宇宙、势阱、反势阱和虫洞的图像，它就像一个克莱因瓶——瓶口是黑洞，瓶身和瓶颈的交界处是白洞，瓶颈是虫洞。</p>
+                        <p>你说的时间隧道，根据爱因斯坦所说的你可以进行时间旅行，但你只能看，就像看电影，却无法改变发生的事情，因为时间是线性的，事件就是一个个珠子已经穿好，你无法改变珠子也无法调动顺序。</p>
+                    </div>
+                    <div class="dom_footer">
+                        <div class="dom_footer_left"></div>
+                        <div class="dom_footer_right">
+                            <h1>推荐书籍——在线阅读</h1>
+                            <ul>
+                                <li><a href="pdf/yuhzoujianshi.pdf">宇宙简史——霍金</a></li>
+                                <li><a href="pdf/shijianjianshi.pdf">时间简史：图解</a></li>
+                                <li><a href="pdf/dabaozha.pdf">大爆炸探秘</a></li>
+                                <li><a href="pdf/21tianwenxue.pdf">21世纪天文学</a></li>
+                                <li><a href="pdf/jijianyuzhou.pdf">极简宇宙</a></li>
+                                <li><a href="pdf/yanshenyuzhou.pdf">延伸的宇宙</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dom" id="dom4">
+                    <div class="dom_banner"><img src="images/bg7.jpg" alt=""></div>
+                    <div class="dom_arti">
+                        <h1>前沿理论</h1>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="dom_footer">
+                        <div class="dom_footer_left"></div>
+                        <div class="dom_footer_right">
+                            <h1>推荐书籍——在线阅读</h1>
+                            <ul>
+                                <li><a href="pdf/yuhzoujianshi.pdf">宇宙简史——霍金</a></li>
+                                <li><a href="pdf/shijianjianshi.pdf">时间简史：图解</a></li>
+                                <li><a href="pdf/dabaozha.pdf">大爆炸探秘</a></li>
+                                <li><a href="pdf/21tianwenxue.pdf">21世纪天文学</a></li>
+                                <li><a href="pdf/jijianyuzhou.pdf">极简宇宙</a></li>
+                                <li><a href="pdf/yanshenyuzhou.pdf">延伸的宇宙</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main_right" style="background-color: rgba(00,00,00,.6)">
+            <div id="tab">
+                <div class="main-header">星空TV:认知黑洞</div>
+                <div id="tab-video">
+                    <video class="tab_video" src="video/bh.mp4" controls></video></div>
+            </div>
+            <div id="content" >
+                <div class="main-header" id="main-header">黑洞:视觉盛宴</div>
+                <ul class="main_ul">
+                    <p class="ul_p">经典纪录片链接</p>
+                    <hr>
+                    <li><a href="https://www.bilibili.com/bangumi/play/ss20957/?from=search&seid=18334504599849636218" target="_blank">纪录片：黑洞——bilibili</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/bangumi/play/ss11795/?from=search&seid=18334504599849636218" target="_blank">电影：黑洞——bilibili</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="http://www.5008w.com/Movie/Sciencefiction/13453/play-0-0.html" target="_blank">电影：星际穿越</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="http://v.renrenfabu.com/jiexi.php?url=https://www.iqiyi.com/v_19rrifpqhz.html?vfm=m_103_txsp" target="_blank">电影：黑洞表面</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="http://yun.baiyug.cn/vip/index.php?url=https://v.qq.com/x/cover/x24ls9in14qrg6y.html" target="_blank">电影：星际迷航</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="http://www.iqiyi.com/w_19rsoangf9.html" target="_blank">宇宙之旅：最大黑洞——爱奇艺</a><audio src="music/mouseover.mp3"></audio></li>
+                    <p class="ul_p">精品短片分享</p>
+                    <hr>
+                    <li><a href="https://www.bilibili.com/video/av3293884?from=search&seid=6020555556571517401" target="_blank">黑洞吞噬太阳</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/video/av2881838?from=search&seid=6020555556571517401" target="_blank">黑洞吞噬恒星</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/video/av12348522?from=search&seid=11195427403113998996" target="_blank">神秘白洞</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/video/av25985293?from=search&seid=11195427403113998996" target="_blank">白洞：喷射源</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="" target="_blank">11</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="" target="_blank">12</a><audio src="music/mouseover.mp3"></audio></li>
+
+                </ul>
+                <div id="main-footer">
+                    <div class="main-header" id="main-header2">理论：天文物理</div>
+                    <ul class="footer_ul">
+                        <p class="ul_p">相关理论</p>
+                        <hr>
+                        <li><a href="https://baike.baidu.com/item/%E7%8B%AD%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA" target="_blank">狭义相对论</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%B9%BF%E4%B9%89%E7%9B%B8%E5%AF%B9%E8%AE%BA" target="_blank">广义相对论</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href=https://baike.baidu.com/item/%E5%93%88%E5%8B%83%E5%AE%9A%E5%BE%8B" target="_blank">哈勃定律</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E6%9A%B4%E8%83%80%E7%90%86%E8%AE%BA" target="_blank">暴胀理论</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%AE%87%E5%AE%99%E8%83%8C%E6%99%AF%E8%BE%90%E5%B0%84?fromtitle=%E5%AE%87%E5%AE%99%E5%BE%AE%E6%B3%A2%E8%83%8C%E6%99%AF%E8%BE%90%E5%B0%84&fromid=4540252" target="_blank">宇宙微波背景辐射</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%B6%85%E7%BA%A7%E9%BB%91%E6%B4%9E" target="_blank">超级黑洞</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%8C%83%C2%B7%E8%89%BE%E4%BC%A6%E5%B8%A6?fromtitle=%E8%8C%83%E8%89%BE%E4%BC%A6%E5%B8%A6&fromid=8817786" target="_blank">范艾伦带</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E7%BA%A2%E7%A7%BB/189542" target="_blank">红移</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%BC%80%E6%99%AE%E5%8B%92%E5%AE%9A%E5%BE%8B" target="_blank">开普勒定律</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%BC%95%E5%8A%9B%E9%80%8F%E9%95%9C" target="_blank">引力透镜</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%B6%85%E5%AF%B9%E7%A7%B0" target="_blank">超对称</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E4%B8%AD%E5%BE%AE%E5%AD%90" target="_blank">中微子</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E6%96%AF%E6%B6%85%E5%B0%94%E5%AE%9A%E5%BE%8B" target="_blank">斯涅尔定律</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E4%B8%BB%E5%BA%8F%E6%98%9F" target="_blank">主序星</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%B5%AB%E7%BD%97%E5%9B%BE/1752814" target="_blank">赫罗图</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E6%81%92%E6%98%9F%E6%BC%94%E5%8C%96" target="_blank">恒星演化</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%B6%85%E6%96%B0%E6%98%9F%E7%88%86%E5%8F%91/10195482?fromtitle=%E8%B6%85%E6%96%B0%E6%98%9F%E7%88%86%E7%82%B8&fromid=8527514" target="_blank">超新星爆发</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%8F%B2%E7%93%A6%E8%A5%BF%E9%BB%91%E6%B4%9E" target="_blank">史瓦西黑洞</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%85%8B%E5%B0%94%E9%BB%91%E6%B4%9E" target="_blank">克尔黑洞</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E9%BB%91%E6%B4%9E%E8%92%B8%E5%8F%91%E7%90%86%E8%AE%BA" target="_blank">黑洞蒸发理论</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E6%98%9F%E9%99%85%E7%89%A9%E8%B4%A8" target="_blank">星际物质</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%93%88%E5%8B%83%E6%98%9F%E7%B3%BB%E5%88%86%E7%B1%BB%E6%B3%95/7988301" target="_blank">哈勃星系分类法</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E9%80%83%E9%80%B8%E9%80%9F%E5%BA%A6" target="_blank">逃逸速度</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E7%94%B5%E5%AD%90%E7%AE%80%E5%B9%B6%E5%8E%8B%E5%8A%9B" target="_blank">电子简并压力</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E6%B4%9B%E5%B8%8C%E6%9E%81%E9%99%90" target="_blank">洛希极限</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E6%99%AE%E6%9C%97%E5%85%8B%E6%97%B6%E9%97%B4%E5%B0%BA%E5%BA%A6" target="_blank">普朗克时间尺度</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%BD%AD%E7%BD%97%E6%96%AF%E7%8C%9C%E6%83%B3" target="_blank">彭罗斯猜想</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E4%B8%B4%E7%95%8C%E5%AF%86%E5%BA%A6" target="_blank">临界密度</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%A5%87%E7%82%B9%E5%AE%9A%E7%90%86/4788608?fromtitle=%E5%A5%87%E7%82%B9&fromid=82736" target="_blank">奇点定理</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%A7%86%E7%95%8C/2399273" target="_blank">视界</a><audio src="music/mouseover.mp3"></audio></li>
+                        <p class="ul_p">恒星亮度计量</p>
+                        <hr>
+                        <li><a href="https://baike.baidu.com/item/%E6%98%9F%E7%AD%89" target="_blank">星等</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%85%89%E5%BA%A6" target="_blank">光度</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E7%BB%9D%E5%AF%B9%E6%98%9F%E7%AD%89/490607" target="_blank">绝对星等</a><audio src="music/mouseover.mp3"></audio></li>
+                        <p class="ul_p">天文距离单位</p>
+                        <hr>
+                        <li><a href="https://baike.baidu.com/item/%E5%A4%A9%E6%96%87%E5%8D%95%E4%BD%8D" target="_blank">天文单位</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%85%89%E5%B9%B4/70940" target="_blank">光年</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E7%A7%92%E5%B7%AE%E8%B7%9D" target="_blank">秒差距</a><audio src="music/mouseover.mp3"></audio></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div id="footer">
+        <div id="footer-r">
+            <h1><a href="#">Contact us</a></h1>
+            <a href="#"><img class="picture" src="images/weixin.png" alt="" width="27px" height="27px" /></a>
+            <a href="#"><img class="picture" src="images/photo.png" alt="" width="27px" height="27px" /></a>
+            <a href="#"><img class="picture" src="images/computer.png" alt="" width="27px" height="27px" /></a>
+        </div>
+        <div id="footer-l">
+            <h1><a href="record.html" target="_blank">原创@Jack Cheng</a></h1>
+            <a href="https://www.nasa.gov/" target="_blank"><img class="picture" src="images/nasa.gif" alt="" width="70px" height="35px" /></a>
+        </div>
+    </div>
+</div>
+</div>
+<script src="javascript/myFunc.js"></script>
+<script>
+    window.onload=function () {
+
+//1..触碰发音
+        var nav=$("nav");
+        var allLis=nav.children;
+
+        for(var i=1;i<allLis.length;i++){
+
+            allLis[i].onmouseover=function () {
+
+                this.children[1].play();
+                this.children[1].currentTime=0;
+            }
+        }
+
+//键盘发音
+// var key=[65,83,68,70,74,75,76];
+        document.onkeydown=function (event) {
+            var e=event||window.event;
+
+            var keyCode=e.keyCode-49;
+
+            allLis[keyCode].children[1].play();
+            allLis[keyCode].children[1].currentTime=0;
+        };
+
+        var buttons=document.getElementsByTagName("button");
+        for(var i=0;i<buttons.length;i++){
+
+            buttons[i].onmouseover=function () {
+
+                this.children[0].play();
+                this.children[0].currentTime=0;
+            }
+        }
+
+
+        var main_left_header=$("main_left_header");
+        var allLis=main_left_header.getElementsByTagName("li");
+
+        for(var i=0;i<allLis.length;i++){
+
+            allLis[i].onmouseover=function () {
+
+                this.children[1].play();
+                this.children[1].currentTime=0;
+            }
+        }
+
+        var content=$("content");
+        var Lis=content.getElementsByTagName("li");
+
+        for(var i=0;i<Lis.length;i++){
+
+            Lis[i].onmouseover=function () {
+
+                this.children[1].play();
+                this.children[1].currentTime=0;
+            }
+        }
+
+
+//2.轮播图
+        var slider=$("slider");
+        var slider_main=$("slider_main");
+        var slider_main_img=slider_main.children;
+        var slider_ctl=slider.children[1];
+        var iNow=0;
+
+//动态创建指示器
+        for(var i=0;i<slider_main_img.length;i++){
+            var span=document.createElement("span");
+            span.className="slider_ctl_icon";
+            span.t=slider_main_img.length-i-1;
+            slider_ctl.insertBefore(span,slider_ctl.children[1]);
+        }
+
+//第一个选中
+        slider_ctl.children[1].className="slider_ctl_icon current";
+
+// 让滚动内容归位
+        var scroll_w=slider.offsetWidth;
+        for(var j=1;j<slider_main_img.length;j++){
+            slider_main_img[j].style.left=scroll_w+'px';
+        }
+
+//遍历监听操作
+        var slider_ctl_child=slider_ctl.children;
+        for(var i=0;i<slider_ctl_child.length;i++){
+            slider_ctl_child[i].onmousedown=function () {
+                if(this.className==="slider_ctl_prev"){
+
+                    buffer(slider_main_img[iNow],{"left":scroll_w});
+                    iNow--;
+                    if(iNow<0){
+                        iNow=slider_main_img.length-1;
+                    }
+                    slider_main_img[iNow].style.left=-scroll_w+'px';
+                    buffer(slider_main_img[iNow],{"left":0});
+
+
+                }else if(this.className==="slider_ctl_next"){
+
+                    autoPlay();
+                }else{
+
+                    var index=parseInt(this.t);
+                    if(index>iNow){
+                        buffer(slider_main_img[iNow],{"left":scroll_w});
+
+                        slider_main_img[index].style.left=-scroll_w+'px';
+
+                    }else if(index<iNow){
+                        buffer(slider_main_img[iNow],{"left":-scroll_w});
+
+                        slider_main_img[index].style.left=scroll_w+'px';
+                    }
+                    iNow=index;
+                    buffer(slider_main_img[iNow],{"left":0});
+                }
+                changeIndex();
+            }
+        }
+
+//切换索引
+        function changeIndex() {
+            for(var i=1;i<slider_ctl_child.length-1;i++){
+                slider_ctl_child[i].className="slider_ctl_icon";
+
+            }
+
+            slider_ctl_child[iNow+1].className="slider_ctl_icon current";}
+
+
+
+//自动播放
+
+        var timer=setInterval(autoPlay,5000);
+        function autoPlay() {
+
+            buffer(slider_main_img[iNow],{"left":-scroll_w});
+            iNow++;
+            if(iNow>=slider_main_img.length){
+                iNow=0;
+            }
+            slider_main_img[iNow].style.left=scroll_w+'px';
+            buffer(slider_main_img[iNow],{"left":0});
+
+            changeIndex();
+        }
+
+//设置清除定时器
+        slider.onmouseover=function () {
+            clearInterval(timer);
+        };
+
+        slider.onmouseout=function () {
+            timer=setInterval(autoPlay,5000);
+        };
+
+//3.Tab选项卡
+        var allLis=$('main_left_header').getElementsByTagName("li");
+        var allDom=$('main_left_content').getElementsByClassName("dom");
+
+        for(var i=0;i<allLis.length;i++){
+            var li=allLis[i];
+            li.index=i;
+
+            li.onmousedown = function () {
+
+                for(var j=0;j<allLis.length;j++){
+                    allLis[j].className="main_left_img";
+                    allDom[j].style.display="none";
+                }
+
+                this.className="main_left_img selected";
+                allDom[this.index].style.display="block";
+            }
+        }
+
+    };
+</script>
+</body>
+</html>

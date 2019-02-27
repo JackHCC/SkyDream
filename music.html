@@ -1,0 +1,331 @@
+<!doctype html><!--声明当前文档为html文档-->
+<html lang="en"><!--语言为英语-->
+	<head><!--头部-->
+		<meta charset="UTF-8"><!--字符编码：utf-8国际编码  gb2312中文编码-->
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<title>天文Dream—太空音乐</title>
+		<script src="javascript/data.js"></script>
+		<script src="javascript/music.js"></script>
+		<style>/*css样式表的衣柜*/
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			font-family:"微软雅黑";
+			overflow:hidden;
+		}
+		.music{
+			width:745px;
+			margin:150px auto;
+			box-shadow:0 0 5px #000;
+			background:rgba(255,255,255,.2);
+			overflow:hidden;
+			border-radius:10px;
+		}
+		.title{
+			height:50px;
+			font-size:30px;
+			line-height:50px;
+			text-align:center;
+			color:#eee;
+			text-shadow:2px 2px 4px #000;
+			background:url("images/con_bot.png");
+		}
+		.main{
+			position:relative;
+			height:400px;
+			color:#fff;
+		}
+		.m_spectrum{
+			width:400px;
+			height:400px;
+			float:left;
+			box-shadow:0 0 5px #ddd;
+		}
+		.m_spectrum div.m_sing{
+			height:370px;
+			text-align:center;
+		}
+		#m_gm{
+			font-size:20px;
+			font-weight:bold;
+			color:#6cf;
+			line-height:40px;
+		}
+		#m_singer{
+			line-height:24px;
+			font-weight:bold;
+		}
+		#m_star{
+			margin-top:10px;
+		}
+		#m_star img{
+			width:100px;
+			height:100px;
+			border-radius:50%;
+		}
+		#m_star img.rotate{
+			animation:rot 2.5s linear infinite;
+		}
+		@keyframes rot{
+			from{transform:rotate(0deg)}
+			to{transform:rotate(360deg)}
+		}
+		.m_lyric{
+			width:340px;
+			height:400px;
+			float:left;
+			box-shadow:0 0 5px #ddd;
+			margin-left:5px;
+		}
+		.m_lyric #lrcCon{
+			margin-top:20px;
+			transition:0.5s linear;
+		}
+		.m_lyric .content{
+			height:370px;
+			overflow:hidden;
+		}
+		.m_lyric #lrcCon p{
+			text-align:center;
+			line-height:20px;
+			color:#ccc;
+		}
+		.m_list{
+			position:absolute;
+			right:-300px;
+			top:30px;
+			width:300px;
+			height:370px;
+			color:#66ffcc;
+			background:rgba(0,0,0,.5);
+		}
+		.m_list ul li{
+			list-style:none;
+			text-align:center;
+			line-height:30px;
+			color:#fff;
+			cursor:pointer;
+		}
+		#menu{
+			position: absolute;
+			top: 167px;
+			right: 0px;
+			width: 16px;
+			height: 67px;
+			background: url("images/tubiao.png") no-repeat;
+		}
+		h2{
+			height:30px;
+			font-size:16px;
+			text-align:center;
+			line-height:30px;
+			box-shadow:0 0 5px #ddd;
+		}
+		.control{
+			height:70px;
+			box-shadow:0 0 5px #ddd;
+			background:url("images/con_bot.png");
+		}
+		.con1{
+			float: left;
+			overflow: hidden;
+		}
+		a{
+			float:left;
+			text-decoration:none;
+		}
+		.con1 #pre,.con1 #next{
+			width:41px;
+			height:41px;
+		}
+		.con1 #pre{
+			background:url("images/houtui.png") 14px 12px no-repeat;
+			margin: 15px 4px 0 9px;
+		}
+		.con1 #next{
+			background:url("images/qianjin.png") 14px 12px no-repeat;
+			margin: 15px 0 0 0;
+		}
+		.con1 #play{
+			width: 57px;
+			height: 57px;
+			margin: 6px 4px 0 0;
+			background:url("images/play.png") no-repeat;
+		}
+		.sound {
+			float: left;
+			margin: 0 46px 0 30px;
+			height: 69px;
+			width: 68px;
+			position: relative;
+		}
+		.sound_have{
+			display: block;
+			width: 12px;
+			height: 12px;
+			margin: 30px 0 0 0;
+			overflow: hidden;
+			background: url("images/sound.png") no-repeat;
+		}
+		.sound .grayp {
+			width: 49px;
+			height: 2px;
+			overflow: hidden;
+			background: #b6b6b6;
+			position: absolute;
+			top: 35px;
+			right: 1px;
+		}
+		.sound .bluep {
+			width: 50px;
+			height: 12px;
+			position: absolute;
+			top: 29px;
+			right: 0;
+			cursor: pointer;
+		}
+		.bluep span{
+			float: left;
+			height: 2px;
+			background: #20b6f1;
+			margin-top: 6px;
+			overflow: hidden;
+		}
+		.sound .kongzhia {
+			background: url("images/jinduhover.png") no-repeat;
+			width: 12px;
+			height: 12px;
+			margin-top: 0;
+		}
+		.jindu {
+			float: left;
+		}
+		.jindu var {
+			float: left;
+			width: 41px;
+			margin-top: 28px;
+			color: #6a6a6a;
+			font-style: normal;
+			font-size:12px;
+		}
+		.jindu2 {
+			float: left;
+			width: 394px;
+			position: relative;
+			margin-right: 10px;
+			height: 69px;
+		}
+		.grayp2 {
+			width: 394px;
+			height: 2px;
+			overflow: hidden;
+			background: #dddddd;
+			position: absolute;
+			top: 35px;
+			left: 0;
+		}
+		.grayp3 {
+			height: 2px;
+			overflow: hidden;
+			background: #b6b6b6;
+			position: absolute;
+			top: 35px;
+			left: 0;
+		}
+		.bluep2 {
+			width: 394px;
+			height: 12px;
+			position: absolute;
+			top: 29px;
+			right: 0;
+		}
+		.bluep2 span {
+			float: left;
+			height: 2px;
+			background: #20b6f1;
+			margin-top: 6px;
+			overflow: hidden;
+		}
+		.kongzhia {
+			background: url("images/jindu2.png") no-repeat;
+			width: 9px;
+			height: 9px;
+			margin-top: 2px;
+		}
+		#bgCanvas{
+			position:absolute;
+			left:0px;
+			top:0px;
+			z-index:-1;
+		}
+		</style>
+	</head>
+	<body><!--身体-->
+		<canvas id="bgCanvas"></canvas>
+		<div class="music">
+			<h1 class="title">太空音乐播放器</h1>
+			<div class="main">
+				<div class="m_spectrum">
+					<h2>音乐旋律</h2>
+					<div class="m_sing">
+						<p id="m_gm">海阔天空</p>
+						<p id="m_singer">Beyond</p>
+						<div id="m_star"><img src="images/1.jpg"></div>
+						<canvas id="canvas" width="400" height="200"></canvas>
+					</div>
+					
+				</div>
+				<div class="m_lyric">
+					<h2>歌词展示</h2>
+					<div class="content"><div id="lrcCon"></div></div>
+				</div>
+				<div class="m_list">
+					<h2>歌曲列表</h2>
+					<ul>
+						<li>海阔天空</li>
+						<li>泡沫</li>
+						<li>我懂了</li>
+						<li>特别的爱给特别的你</li>
+						<li>半壶纱</li>
+					</ul>
+				</div>
+				<a id="menu" href="javascript:;"></a>
+			</div>
+			<div class="control">
+				<div class="con1">
+					<a href="javascript:;" id="pre"></a>
+					<a href="javascript:;" id="play"></a>
+					<a href="javascript:;" id="next"></a>
+				</div>
+				<div class="con2">
+					<div class="sound" style="margin: 0 30px 0 10px;">
+						<a href="javascript:void(0)" class="sound_have" id="wp_mute"></a>
+						<p class="grayp"></p>
+						<p class="bluep" id="wp_volProcess">
+							<span id="wp_volBar" style="width:38px;"></span>
+							<a href="javascript:void(0)" class="kongzhia" id="wp_volBtn"></a>
+						</p>
+					</div>
+					<div class="jindu">
+						<var id="wp_playTime">00:00</var>
+						<div class="jindu2" style="width: 354px;">
+							
+							<p class="grayp2" style="width: 354px;"></p>
+							<p class="grayp3" style="width: 354px;" id="wp_bufBar"></p>
+							<p class="bluep2" id="wp_process" style="cursor: pointer;width: 354px;">
+								<span id="wp_processBar"></span>
+								<a href="javascript:void(0)" class="kongzhia" id="wp_processBtn"></a>
+							</p>
+						</div>
+						<var id="wp_totalTime">00:00</var>
+					</div>
+				</div>
+			</div>
+		</div>
+		<audio src="music/1.mp3" id="audio"></audio>
+		<script src="javascript/canvasBg.js"></script>
+	</body>
+</html>

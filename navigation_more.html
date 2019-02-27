@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最新时讯</title>
+    <link rel="stylesheet" href="css/chushihua.css">
+    <style>
+        body{
+            background:url("images/bg14.jpg");
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+            background-attachment:fixed;
+            position: relative;
+        }
+        /*header*/
+        #top{
+
+            top: 0;
+            height: 60px;
+            width: 100%;
+
+        }
+        #logo{
+
+            width: 200px;
+            height:60px;
+            margin: 10px 10px;
+            float: left;
+
+        }
+        #logo img{
+            margin-top: 6px;
+            margin-left: 0px;
+            opacity: 1;
+            float:left;
+        }
+        #logo p{
+            float:right;
+            color:white;
+            margin-right: 10px;
+            font-size: 15px;
+            margin-top: 10px;
+            height: 18px;
+            opacity: 1;
+        }
+        #header{
+
+            width: 850px;
+            height:60px;
+            margin: 10px 10px;
+            float: left;
+        }
+        #nav img{
+            float: left;
+            opacity: 1;
+        }
+        #nav li{
+
+            width:80px;
+            float:left;
+            margin-right: 25px;
+            margin-top: 14px;
+
+        }
+        #nav li a{
+            font-size: 18px;
+            line-height: 28px;
+            font-family: '微软雅黑';
+            color:white;
+            display: block;
+            height:40px;
+            width:80px;
+            opacity: 1;
+            text-decoration: none;
+        }
+        #nav a:hover{
+            color:#A8A5A5;
+            font-weight:bold ;
+
+        }
+        #signin{
+            /*background: white;*/
+            width: 150px;
+            height:60px;
+            margin-left: 30px;
+            margin-top: 10px;
+            float:left;
+
+        }
+        #signin .sign{
+            font-size: 20px;
+            float: left;
+            height: 40px;
+            width: 60px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #signin .sign:hover{
+            transform: scale(1.1);
+            opacity: 0.7;
+        }
+
+        #signin #l{
+            background-color: white;
+            color: #000000;
+        }
+
+        #signin #r{
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /*header*/
+
+        /*main*/
+        /*轮播图*/
+
+        .slider{
+            width: 950px;
+            height: 535px;
+            position: relative;
+            margin: 30px auto;
+            /*background-color: red;*/
+            overflow: hidden;
+        }
+
+        .slider_scroll{
+            width: 950px;
+            height: 500px;
+            position: relative;
+        }
+
+        .slider_main{
+            width: 1900px;
+            height: 500px;
+            background-color: black;
+        }
+
+        .slider_main_img{
+            width: 950px;
+            height: 500px;
+            position: absolute;
+        }
+
+        .slider_main_img img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider_ctl{
+            cursor: pointer;
+        }
+        .slider_ctl_prev,.slider_ctl_next{
+            /*background: #fff;*/
+            /*width: 30px;*/
+            /*height: 30px;*/
+            border: 15px solid #fff;
+            border-radius: 50%;
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            margin-top: -35px;
+        }
+        .slider_ctl_prev{
+            left: 5px;
+
+        }
+
+        .slider_ctl_next{
+
+            background-position: -9px -45px;
+            right: 5px;
+        }
+
+        .slider_ctl_icon{
+            border:10px solid gray;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 7px 10px;
+
+            float: left;
+        }
+        .slider_ctl:nth-child(2){
+            margin-left: 400px;
+        }
+
+
+        .current{
+            border-color: #cccccc;
+        }
+        /*轮播图*/
+
+
+        #main{
+            width: 100%;
+            height: 2200px;
+            /*background-color: blue;*/
+            margin: 0 auto;
+            position: absolute;
+            top: 640px;
+        }
+        #main_left{
+            width: 64%;
+            height: 2150px;
+            float: left;
+            margin: 15px 10px;
+            /*background-color: gray;*/
+            border:1px solid #ffffff;
+        }
+
+        #main_left_header{
+            width: 98%;
+            height: 156px;
+            /*background-color: black;*/
+            float: left;
+            margin: 8px;
+        }
+        #main_left_header ul li{
+            width: 22%;
+            height: 140px;
+            background-color: #ffffff;
+            margin-left: 12px;
+            margin-top: 3px;
+            float: left;
+            border:4px solid #ffffff;
+            opacity:0.9;
+            filter: alpha(opacity=90);
+            border-radius: 4px;
+        }
+        #main_left_header ul li:hover{
+            transform: scale(1.05);
+
+        }
+        #main_left_header ul .selected{
+            opacity:1;
+            filter: alpha(opacity=100);
+        }
+        #main_left_header img{
+            width: 100%;
+            height: 100%;
+        }
+
+        #main_left_content{
+            width: 98%;
+            height: 1960px;
+            /*background-color: black;*/
+            border: 1px solid #ffffff;
+            float: left;
+            margin: 8px;
+            overflow: hidden;
+        }
+        .dom{
+            border: 1px solid #ffffff;
+            /*opacity: 0.2;*/
+        }
+
+        .dom .dom_banner{
+            height: 400px;
+            width: 96%;
+            border: 1px solid #ffffff;
+            margin: 15px auto;
+        }
+        .dom .dom_banner img{
+            height: 100%;
+            width: 100%;
+        }
+        .dom .dom_arti{
+            height: 1200px;
+            width: 96%;
+            border: 1px solid #ffffff;
+            margin: 15px auto;
+            overflow: scroll;
+            overflow-x: hidden;
+            /*background-color: #999999;*/
+        }
+        .dom .dom_arti h1{
+            font-size:25px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            color: #ffffff;
+            letter-spacing: 10px;
+        }
+        .dom .dom_arti button{
+            float: right;
+            font-size: 18px;
+            background-color: gray;
+            color: #ffffff;
+            margin-right: 20px;
+        }
+        .dom .dom_arti button:hover{
+            transform: scale(1.2);
+        }
+        .dom .dom_arti h2{
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 26px;
+            color: #BFBBBB;
+            letter-spacing: 6px;
+            text-align: left;
+            text-indent: 2em;
+        }
+        .dom .dom_arti p{
+            font-size: 12px;
+            line-height: 24px;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-align: justify;
+            padding:10px 20px;
+            text-indent: 2em;
+        }
+        .dom .dom_footer{
+            height: 300px;
+            width: 96%;
+            border: 1px solid #ffffff;
+            margin: 15px auto;
+        }
+        .dom .dom_footer .dom_footer_left{
+            height: 96%;
+            width: 25%;
+            margin: 5px 20px;
+            /*border: 1px solid #ffffff;*/
+            float: left;
+        }
+        .dom .dom_footer .dom_footer_left video{
+            height: 100%;
+            width: 100%;
+        }
+        .dom .dom_footer .dom_footer_right{
+            height: 96%;
+            width: 65%;
+            border: 1px solid #ffffff;
+            margin: 5px 10px;
+            float: left;
+        }
+        #dom1{
+            width: 100%;
+            height: 100%;
+            /*background-color: yellow;*/
+        }
+        #dom2{
+            width: 100%;
+            height: 100%;
+            /*background-color: green;*/
+        }
+        #dom3{
+            width: 100%;
+            height: 100%;
+            /*background-color: blue;*/
+        }
+        #dom4{
+            width: 100%;
+            height: 100%;
+            /*background-color: white;*/
+        }
+
+        #main_right{
+            width: 32%;
+            height: 2150px;
+            float: right;
+            margin: 15px 10px;
+            /*background-color: gray;*/
+            border:1px solid #ffffff;
+        }
+        #main_right #tab{
+            width: 94%;
+            height: 270px;
+            /*border: 1px solid #ffffff;*/
+            margin: 25px 11px;
+            float: left;
+        }
+        #main_right  .main-header{
+            width: 100%;
+            height: 25px;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            color: #ffffff;
+        }
+        #main_right  #content #main-header{
+            margin-top: 12px;
+        }
+        #main_right  #main-footer #main-header2{
+            margin-top: 12px;
+        }
+        #main_right  #content .main_ul{
+            width: 96%;
+            height: 630px;
+            margin-top: 5px;
+            margin-left: 6px;
+            border: 1px solid #ffffff;
+            float: left;
+        }
+        #main_right  #content .main_ul li{
+            width: 100%;
+            height: 25px;
+            font-size: 16px;
+            line-height: 25px;
+            margin-top: 24px;
+            text-align: center;
+        }
+        #main_right  #content .main_ul li a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        #main_right  #content li a:hover{
+            color:#cccccc;
+            font-size: 18px;
+        }
+        #main_right  #content .main_ul .ul_p{
+            width: 100%;
+            height: 25px;
+            font-size: 20px;
+            line-height: 25px;
+            margin-top: 24px;
+            text-align: center;
+            color: #BFBBBB;
+        }
+        hr{
+            width: 60%;
+            text-align: center;
+
+        }
+        #main_right #main-footer {
+            width: 96%;
+            height: 840px;
+            margin-top: 20px;
+            margin-left: 6px;
+            /*border: 1px solid #ffffff;*/
+            float: left;
+
+        }
+        #main_right #main-footer ul{
+            width: 96%;
+            height: 940px;
+            margin-top: 5px;
+            margin-left: 6px;
+            border: 1px solid #ffffff;
+            float: left;
+        }
+        #main_right #main-footer li{
+            width: 100%;
+            height: 25px;
+            font-size: 16px;
+            line-height: 25px;
+            margin-top: 24px;
+
+            text-align: center;
+        }
+        #main_right #main-footer li a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        #main_right #tab #tab-video{
+            width: 96%;
+            height: 210px;
+            margin-top: 15px;
+            margin-left: 6px;
+            border: 1px solid #ffffff;
+        }
+        #main_right #tab #tab-video .tab_video{
+            width: 100%;
+            height: 210px;
+            float: left;
+        }
+
+        #main_right #content{
+            width: 94%;
+            height: 1800px;
+            /*border: 1px solid #ffffff;*/
+            margin: 11px;
+            float: left;
+        }
+        /*main*/
+
+        /*footer*/
+        #footer{
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            top: 2840px;
+            margin: auto;
+            /*background-color: #fff;*/
+        }
+        #footer-l{
+
+            width: 340px;
+            height:60px;
+            margin-left: 20px;
+            margin-top: 10px;
+            float:left;
+        }
+        #footer-l h1{
+            font-size: 15px;
+            font-weight: bold;
+            margin: 15px 15px;
+            color: aliceblue;
+            float: left;
+            color: #ffffff;
+        }
+        #footer-r{
+
+            width: 240px;
+            height:60px;
+            margin-left: 20px;
+            margin-top: 10px;
+            float:right;
+        }
+        #footer-r h1{
+            font-size: 15px;
+            font-weight: bold;
+            margin: 15px 10px;
+            float: left;
+
+        }
+        .picture{
+            float:left;
+            margin-top: 10px;
+            margin-right: 15px;
+        }
+
+        #footer-l h1 a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        #footer-r h1 a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+        #footer-r h1 a,#footer-l h1 a:hover{
+            color: gray;
+        }
+        /*footer*/
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <!--header-->
+    <div id="top">
+        <div id="logo">
+            <a href="#"><img src="images/logo.png" width="95px" height="45px" alt="" />
+                <p>梦想点缀星空<br> 星空美化未来</p></a>
+        </div>
+        <div id="header">
+            <ul id="nav">
+                <img src="images/pic.png" alt="" width="85px" height="65px" />
+                <li><a href="index.html">首页</a><audio src="music/A%205.mp3"></audio></li>
+                <li><a href="navigation_kepu.html">宇宙科普</a><audio src="music/B%205.mp3"></audio></li>
+                <li><a href="navigation_star.html" >星球星系</a><audio src="music/C%205.mp3"></audio></li>
+                <li><a href="navigation_bhole.html" >黑洞理论</a><audio src="music/D%205.mp3"></audio></li>
+                <li><a href="navigation_outearth.html" >地外生命</a><audio src="music/E%205.mp3"></audio></li>
+                <li><a href="#" >最新时讯</a><audio src="music/F%205.mp3"></audio></li>
+                <li><a href="navigation_aboutme.html" >关于我们</a><audio src="music/G%205.mp3"></audio></li>
+            </ul>
+        </div>
+        <div id="signin">
+            <button id="l" class="sign">注册<audio src="music/tune.mp3"></audio></button>
+            <button id="r" class="sign">登录<audio src="music/tune.mp3"></audio></button>
+        </div>
+    </div>
+
+    <!--main-->
+    <div id="slider" class="slider">
+        <div id="slider_scroll" class="slider_scroll">
+            <div class="slider_main" id="slider_main">
+                <div class="slider_main_img"><a href=""><img src="images/nav_more_banner1.jpg" width="950px" height="
+500px"></a></div>
+                <div class="slider_main_img"><a href=""><img src="images/nav_more_banner2.jpg" width="950px" height="
+500px"></a></div>
+                <div class="slider_main_img"><a href=""><img src="images/nav_more_banner3.jpg" width="950px" height="
+500px"></a></div>
+                <div class="slider_main_img"><a href=""><img src="images/nav_more_banner4.jpg" width="950px" height="
+500px"></a></div>
+            </div>
+        </div>
+        <div class="slider_ctl" id="slider_ctl">
+            <span class="slider_ctl_prev"></span>
+
+            <span class="slider_ctl_next"></span>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="main_left">
+            <div id="main_left_header">
+                <ul>
+                    <li class="main_left_img selected" ><img src="images/header17.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                    <li class="main_left_img"><img src="images/header18.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                    <li class="main_left_img"><img src="images/header19.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                    <li class="main_left_img"><img src="images/header20.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                </ul>
+            </div>
+            <div id="main_left_content" style="background-color: rgba(00,00,00,.6)">
+                <div class="dom" id="dom1" style="display: block">
+                    <div class="dom_banner"><img src="images/bg11.jpg" alt=""></div>
+                    <div class="dom_arti" id="dom_arti">
+                        <h1>著名流星雨</h1>
+                        <button>阅读模式<audio src="music/tune.mp3"></audio></button>
+                        <h2>1.狮子座流星雨 </h2>
+                        <p>狮子座流星雨在每年的11月14至21日左右出现。一般来说，流星的数目大约为每小时10至15颗，但平均每33至34年狮子座流星雨会出现一次高峰期，流星数目可超过每小时数千颗。这个现象与谭普-塔特而彗星的周期有关。流星雨产生时，流星看来会像由天空上某个特定的点发射出来，这个点称为“辐射点”，由于狮子座流星雨的辐射点位于狮子座，因而得名。</p>
+                        <h2>2.双子座流星雨 </h2>
+                        <p>双子座流星雨在每年的12月13至14日左右出现，最高时流量可以达到每小时120颗，且流量极大的持续时间比较长。双子座流星雨源自小行星1983 TB，该小行星由IRAS卫星在1983年发现，科学家判断其可能是“燃尽”的彗星遗骸。双子座流星雨辐射点位于双子座，是著名的流星雨。 </p>
+                        <h2>3.英仙座流星雨 </h2>
+                        <p>英仙座流星雨每年固定在7月17日到8月24日这段时间出现，它不但数量多，而且几乎从来没有在夏季星空中缺席过，是最适合非专业流星观测者的流星雨，地位列全年三大周期性流星雨之首。彗星Swift-Tuttle是英仙座流星雨之母，1992年该彗星通过近日点前后，英仙座流星雨大放异彩，流星数目达到每小时400颗以上。</p>
+                        <h2>4.猎户座流星雨 </h2>
+                        <p>猎户座流星雨有两种，辐射点在参宿四附近的流星雨一般在11月20日左右出现；辐射点在ν附近的流星雨则发生于10月15日到10月30日，极大日在10月21日，我们常说的猎户座流星雨是后者，它是由著名的哈雷彗星造成的，哈雷彗星每76年就会回到太阳系的核心区，散布在彗星轨道上的碎片，形成了著名的猎户座流星雨。 </p>
+                        <h2>5.金牛座流星雨 </h2>
+                        <p>金牛座流星雨在每年的10月25日至11月25日左右出现，一般11月8日是其极大日，Encke彗星轨道上的碎片形成了该流星雨，极大日时平均每小时可观测到五颗流星曳空而过，虽然其流量不大，但由于其周期稳定，所以也是广大天文爱好者热衷的对象之一。 </p>
+                        <h2>6.天龙座流星 </h2>
+                        <p>天龙座流星雨在每年的10月6日至10日左右出现，极大日是10月8日，该流星雨是全年三大周期性流星雨之一，最高时流量可以达到每小时120颗，其极大日一般接近新月，较无月光影响，为观测者提供了很好的观测条件。Giacobini-Zinner彗星是天龙座流星雨的本源。 </p>
+                        <h2>7.天琴座流星雨 </h2>
+                        <p>天琴座流星雨一般出现于每年的4月19日至23日，通常22日是极大日。该流星雨是我国最早记录的流星雨，在古代典籍《春秋》中就有对其在公元前687年大爆发的生动记载。彗星1861 I的轨道碎片形成了天琴座流星雨，该流星雨作为全年三大周期性流星雨之一在天文学中也占有的极其重要的地位。 </p>
+                        <h2>2018年流星雨时间注释</h2>
+                        <p>　　1月象限仪座流星雨，预计出现日期大概3日-4日。<br>
+                            　　4月天琴座流星雨（Lyrids），预计出现日期大概21日-22日。<br>
+                            　　5月宝瓶座Eta流星雨（EtaAquarids），预计出现日期大概21日-22日。<br>
+                            　　6月天琴座流星雨（Lyrids），预计出现日期大概14日-16日。<br>
+                            　　7月宝瓶座Delta流星雨，预计出现日期大概28日-29日。<br>
+                            　　7-8月摩羯座流星雨（Capricornids），预计出现日期大概29日-30日。<br>
+                            　　8月英仙座流星雨（Perseids），预计出现日期大概12日-13日。<br>
+                            　　10月天龙座流星雨（Draconids），预计出现日期大概12日-13日。<br>
+                            　　10-11月猎户座流星雨（Orionids），预计出现日期大概21日-22日。<br>
+                            　　11月狮子座流星雨(Leonids)，预计出现日期大概17日-18日。<br>
+                            　　12月双子座流星雨（Geminids），预计出现日期大概13日-14日。<br>
+                            　　12月小熊座流星雨，预计出现日期大概17日-26日。</p>
+                        <p></p>
+                    </div>
+                    <div class="dom_footer">
+                        <div class="dom_footer_left"><video src="video/video5.mp4" controls></video></div>
+                        <div class="dom_footer_right"></div>
+                    </div>
+                </div>
+                <div class="dom" id="dom2">
+                    <div class="dom_banner"><img src="images/nav_kepu_banner3.jpg" alt=""></div>
+                    <div class="dom_arti">
+                        <h1>日全食</h1>
+                        <h2>基本简介</h2>
+                        <p>日食，又作日蚀，是一种天文现象，当月球运行至太阳与地球之间时，对地球上的日全食部分地区来说，月球挡住了太阳的部分或全部光线，看起来好像是太阳的一部分或全部消失了，这就是日食。日食只在发生在朔，即月球与太阳呈现合的状态时发生。</p>
+                        <p>日食是相当罕见的现象，在三种日食中较罕见的是日全食，因为唯有在月球的本影投影在地球表面时，在该区域的人才能够观测到日食。日全食是一种相当壮丽的自然景象，所以时常吸引许多游客特地到海外去观赏日全食的景象。例如，在1999年发生在欧洲的日全食，吸引了非常多观光客特地前去观赏，也有旅行社推出专门为这些游客设计的行程。</p>
+                        <p>日、月食的发生必须是新月和满月出现在黄白交点的一定界限之内。计算表明，对日食而言，如果新月在黄道和白道的交点附近18°左右的范围内，就可能发生日食；如果新月在黄道和白道的交点附近16°左右的范围内，则一定有日食发生。</p>
+                        <p>太阳每天在黄道上向东移动约1°，由于日食的食限为18°左右的范围，太阳从黄道和白道交点以西的18°运行到黄道和白道交点以东的18°，大约需要36天，也就是说日食的每一个食季为36天。对于月食而言，它的食限为12°左右，因此月食的每一个食季就只有24天。</p>
+                        <h2>日食过程</h2>
+                        <p>一次日全食的过程可以分为以下五个时期：初亏、食既、食甚、生光、复圆。</p>
+                        <p>初亏</p>
+                        <p>由于月亮自西向东绕地球运转，所以日食总是在太阳圆面的西边缘开始的。当月亮的东边缘刚接触到太阳圆面的瞬间（即月面的东边缘与日面的西边缘相外切的时刻），称为初亏。初亏也就是日食过程开始的时刻。</p>
+                        <p>食既</p>
+                        <p>从初亏开始，英国天文学家倍利最早描述了这种现象，因此又称为倍利珠。这是由于月球表面有许多崎岖不平的山峰，当阳光照射到月球边缘时，就形成了贝利珠现象。</p>
+                        <p>食甚</p>
+                        <p>食既以后，日轮继续东移，当月轮中心和日面中心相距最近时，就到食甚。食甚是太阳被月亮遮去最多的时刻。</p>
+                        <p>生光</p>
+                        <p>月亮继续往东移动，当月面的西边缘和日面的西边缘相内切的瞬间，称为生光，它是日全食结束的时刻。在生光将发生之前，钻石环、贝利珠的现象又会出现在太阳的西边缘，但也是很快就会消失。接着在太阳西边缘又射出一线刺眼的光芒，原来在日全食时可以看到的色球层、日珥、日冕等现象迅即隐没在阳光之中，星星也消失了，阳光重新普照大地。</p>
+                        <p>复圆</p>
+                        <p>生光之后，月面继续移离日面，太阳被遮蔽的部分逐渐减少，当月面的西边缘与日面的东边缘相切的刹那，称为复圆。这时太阳又呈现出圆盘形状，整个日全食过程就宣告结束了。</p>
+                        <h2>现象原理</h2>
+                        <p>发生日全食是因为太阳靠近月球轨道与地球轨道的一个交点，而同时月球在距此点的最远的点上。食既从初亏开始，就是偏食阶段了。月亮继续往东运行，太阳圆面被月亮遮掩的部分逐渐增大，阳光的强度与热度显著下降。当月面的东边缘与日面的东边缘相内切时，称为食既。此时整个太阳圆面被遮住，因此，食既也就是日全食开始的时刻。即为光的直线传播。</p>
+                        <p>之所以会发生日全食，是因为存在一种神奇的对称性。太阳的直径是月亮的400倍，而它距地球的距离正好也是月亮的400倍。结果，当月亮完全处于地球和太阳之间时，对那些完全处于月亮阴影中的人来说，太阳的表面便被完全遮挡了。太阳变成了黑色，只留下一个金色的光环，天空变成了靛青色。鸟儿此时会失去方向，或者会飞回巢中，蝙蝠和其它夜行动物则可能睡眼惺忪地出来活动。</p>
+
+                    </div>
+                    <div class="dom_footer">
+                        <div class="dom_footer_left"></div>
+
+                        <div class="dom_footer_right"></div>
+                    </div>
+                </div>
+                <div class="dom" id="dom3">
+                    <div class="dom_banner"><img src="images/bg9.jpg" alt=""></div>
+                    <div class="dom_arti">
+                        <h1>月相</h1>
+                        <h2>月相定义</h2>
+                        <p>月相是指天文学中对于地球上看到的月球被太阳照明部分的称呼。月球绕地球运动，使太阳、地球、月球三者的相对位置在一个月中有规律地变动。因为月球本身不发光，且不透明，月球可见发亮部分是反射太阳光的部分。只有月球直接被太阳照射的部分才能反射太阳光。我们从不同的角度上看到月球被太阳直接照射的部分，这就是月相的来源。月相不是由于地球遮住太阳所造成的(这是月食)，而是由于我们只能看到月球上被太阳照到发光的那一部分所造成的，其阴影部分是月球自己的阴暗面。</p>
+                        <h2>月相成因</h2>
+                        <p>月球靠反射阳光发亮，它与太阳相对位置不同(黄经差)，便会呈现出各种形状。</p>
+                        <p>朔:如图所示，在位置1，日月黄经差为0°，这时月球位于地球和太阳之间，以黑暗面朝向地球，且与太阳几乎同时出没，故地面上无法见到，这就是朔，这一天为农历的初一。</p>
+                        <p>上弦月:月球继续朝前旋转，到了农历初七、八，也就是图中的位置3，黄经差为90°，太阳落山，月球已经在头顶，到了半夜，月球才落下去，这时被太阳照亮的月球，恰好有一半给你看到，称之为"上弦"。</p>
+                        <p>满月:到了农历十五、十六，月球转到地球的另一面，也就是图中的位置5，黄经差为180°。这时地球在太阳和月亮的中间，月球被太阳照亮的那一半正好对着地球，此时我们看到的是满月，或称之为"望"。由于月球正好在太阳的对面故太阳在西边落下，月球则从东边升起，到了月球落下，太阳又从东边上升了，一轮明月整夜可见。</p>
+                        <p>下弦月:满月以后，月球升起的时间一天比一天迟了，月球亮的部分也一天比一天看到的小了，到了农历二十三，也就是图中的位置7，黄经差270°。满月亏去了一半，这时的半月只在下半夜出现于东半天空中，这就是"下弦"。</p>
+                        <p>快到月底的时候，月球又将旋转到地球和太阳中间，在日出之前不久，残月才又由东方升起。到了下月初一，又是朔，开始新的循环。</p>
+                        <h2>恒星月与朔望月</h2>
+                        <p>日、地、月大致在同一直线上时,正是在地球上月圆之时.自此时开始,月球相对于恒星绕地球运转360°,这段时长约27.3天,被看作月亮的运动周期，因这个周角是相对恒星来说的，所以对应周期叫作恒星月.这段时间内地球绕太阳公转也要移动一段距离,此时日、地、月有一定夹角,日、地、月大致共线还有一段时间,大致再过2.2天月球随地球一起运转到达新的位置,终于再次出现三星大致共线，方始再次出现地球上的月圆.于是对于地球来说,月相变化才算是完成了一个周期,再次出现朔望，所以这个周期叫做一个朔望月,时长大致是27.32天+2.21天=29.53天.故朔望月时间比恒星月长.朔望月绕地球为360°+360°×29.53/365.24=389.11°，而一个恒星月的计算便大约为29.53×360° / 389.11 °= 27.32天.</p>
+                        <p>月球绕地球公转的轨道面(白道面)与地球绕太阳公转的轨道面(黄道面)之间有5度夹角，因此新月或满月时月地日之间往往并非完全是一条直线。当月地日之间完全是一条直线时就可以观察到日蚀(新月时)或月蚀(满月时)。正是由于这5度的倾斜，每月都有新月和满月然而并非每月都有月食和日食。</p>
+                        <p>它(阴历)在天文学中主要指按月亮的月相周期来安排的历法。以月球绕行地球一周(以太阳为参照物，实际月球运行超过一周)为一个月，即把朔望月作为确定历月的基础的一种历法。农业气象学中，它(阴历)俗称农历、殷历、古历、旧历，就是指中国传统上使用的夏历。而在天文学中认为它实际上也是一种阴阳历。</p>
+                        <h1>月食</h1>
+                        <h2>简介</h2>
+                        <p>地球在背着太阳的方向会出现一条阴影，称为地影。地影分为本影和半影两部分。本影是指没有受到太阳光直射的地方，而半影则只受到部分太阳直射的光线。月球在环绕地球运行过程中有时会进入地影，这就产生月食现象。当月球整个都进入本影时，就会发生月全食；但如果只是一部分进入本影时，则只会发生月偏食。月全食和月偏食都是本影月食。</p>
+                        <p>在月全食时，月球并不是完全看不见的，这是由于太阳光在通过地球的稀薄大气层时受到折射进入本影，投射到月面上，令到月面呈红铜色。似乎月球经过本影的路径及当时地球的大气情况，光度在不同的月全食会有所不同。 有时月球并不会进入本影而只进入半影，这就称为半影月食。在半影月食发生期间，月亮将略为转暗，但它的边缘并不会被地球的影子所阻挡。</p>
+                        <h2>月食过程</h2>
+                        <p>月全食后半影食始：月球刚刚和半影区接触，这时肉眼觉察不到。正式的月食的过程分为初亏、食既、食甚、生光、复圆五个阶段。</p>
+                        <p>1. 半影食始：月球刚刚和半影区接触，这时月球表面光度略为减少，但肉眼较难觉察。</p>
+                        <p>2. 初亏（仅月偏食和月全食）：标志月食开始。月球由东缘慢慢进入地影，月球与地球本影第一次外切。</p>
+                        <p>3. 食既（仅月全食）：月球进入地球本影，并与本影第一次内切。月球刚好全部进入地球本影内。</p>
+                        <p>4.食甚：月圆面中心与地球本影中心最接近的瞬间，此时前后月球表面呈红铜色或暗红色。（原因：太阳光经过地球大气层时发生折射，使光线向内侧偏折，但每种光的偏折程度不一样（色散），</p>
+                        <p>红光偏折程度最大，最接近地球阴影，映在月球上；此外，由于大气层的灰尘及云的含量与位置不同，光线偏折程度会有不同，因此月全食时的月球是暗红、红铜、或橙色的。同样的道理，由于大气层的折射，朝阳与夕阳不是白色的，而根据高度因为大气折射程度不同，呈现橙色或红色。）</p>
+                        <p>5.生光（仅月全食）：月球在地球本影内移动，并与地球本影第二次内切。月球东边缘与地球本影东边缘相内切，这时全食阶段结束</p>
+                        <p>6. 复圆（仅月偏食和月全食）：月球逐渐离开地球本影，与地球本影第二次外切。 月球的西边缘与地球本影东边缘相外切，这时月食全过程结束。月球被食的程度叫“食分”，它等于食甚时月轮边缘深入地球本影最远距离与月球视经之比。</p>
+                        <p>7.半影食终：月球离开半影，整个月食过程正式完结。月偏食没有食既、生光过程，食甚也只表示最接近地球阴影的时刻。</p>
+                        <h2>月食原理</h2>
+                        <p>月食的原理。在农历十五、十六，月亮运行到和太阳相对的方向。这时如果地球和月亮的中心大致在同一条直线上，月亮就会进入地球的本影，而产生月全食。如果只有部分月亮进入地球的本影，就产生月偏食。当月球进入地球的半影时，应该是半影食，但由于它的亮度减弱得很少，不易察觉，故不称为月食，</p>
+                        <p>所以月食只有月全食和月偏食两种。 月食都发生在望（满月），但不是每逢望都有月食，这和每逢朔不都出现日食是同样的道理。在一般情况下，月亮不是从地球本影的上方通过，就是在下方离去，很少穿过或部分通过地球本影，因此，一般情况下就不会发生月食。每年月食最多发生3次，有时一次也不发生。 地球在背着太阳的方向会出现一条阴影，称为地影。地影分为本影和半影两部分。本影是指没有受到太阳光直射的地方，而半影则只受到部分太阳直射的光线。月球在环绕地球运行过程中有时会进入地影，这就生成月食现象。</p>
+                        <p>当月球整个都进入本影时，就会发生月全食；但如果只是一部分进入本影时，则只会发生月偏食。月全食和月偏食都是本影月食。 在月全食时，月球并不是完全看不见的，这是由于太阳光在通过地球的稀薄大气层时受到折射进入本影，投射到月面上，令到月面呈红铜色。视乎月球经过本影的路径及当时地球的大气情况，亮度在不同的月全食会有所不同。 有时月球并不会进入本影而只进入半影，这就称为半影月食。在半影月食发生期间，月亮将略为转暗，但它的边缘并不会被地球的影子所阻挡。</p>
+                    </div>
+                    <div class="dom_footer">
+                        <div class="dom_footer_left"></div>
+                        <div class="dom_footer_right"></div>
+                    </div>
+                </div>
+                <div class="dom" id="dom4">
+                    <div class="dom_banner"><img src="images/bg7.jpg" alt=""></div>
+                    <div class="dom_arti">
+                        <h1>天象</h1>
+                        <p>包括太阳出没、行星运动、日月变化、彗星、流星、流星雨、陨星、日食、月食、极光、新星、超新星、月掩星、太阳黑子等。</p>
+                        <h1>凌日</h1>
+                        <p>凌日即指太阳被一个小的暗星体遮挡。这种小的暗星体经常是太阳系行星。 也可以解释为凌日是内行星经过日面的一种天文现象。水星和金星的绕日运行轨道在地球轨道以内，称内行星。</p>
+                        <p>如果这两颗行星的一颗恰好从地球与太阳之间经过，地球上的观察者就会看到有一个黑点从太阳圆面通过，需时大约为一个多小时，人们把这种现象称为凌日。显然，地球上的人们能看到的只有水星凌日和金星凌日，如果人类能够站在火星观测，则可以看到地球凌日的胜景。</p>
+                        <h2>金星凌日</h2>
+                        <p>公元902年至3097年金星凌日一览表(北京时间)
+                        902年11月26日金星从日面北缘掠过<br>
+
+                            910年11月24日<br>
+
+                            1032年5月24日至25日<br>
+
+                            1040年5月22日<br>
+
+                            1145年11月26日金星从日面北缘掠过<br>
+
+                            1153年11月24日<br>
+
+                            1275年5月26日<br>
+
+                            1283年5月23日<br>
+
+                            1388年11月26日金星从日面北缘掠过<br>
+
+                            1396年11月23日至24日<br>
+
+                            1518年5月26日<br>
+
+                            1526年5月24日<br>
+
+                            1631年12月7日<br>
+
+                            1639年12月4日至5日<br>
+
+                            1761年6月6日<br>
+
+                            1769年6月4日<br>
+
+                            1874年12月9日<br>
+
+                            1882年12月6日至7日<br>
+
+                            2004年6月8日<br>
+
+                            2012年6月6日<br>
+
+                            2117年12月11日<br>
+
+                            2125年12月8日至9日<br>
+
+                            2247年6月11日<br>
+
+                            2255年6月9日<br>
+
+                            2360年12月13日<br>
+
+                            2368年12月10日至11日<br>
+
+                            2490年6月12日至13日<br>
+
+                            2498年6月10日<br>
+
+                            2603年12月16日<br>
+
+                            2611年12月13日<br>
+
+                            2733年6月15日至16日<br>
+
+                            2741年6月13日<br>
+
+                            2846年12月17日<br>
+
+                            2854年12月14日金星从日面南缘掠过<br>
+
+                            2976年6月17日<br>
+
+                            2984年6月14日至15日<br>
+
+                            3089年12月19日<br>
+
+                            3097年12月16日金星从日面南缘掠过<br></p>
+                        <h2>水星凌日</h2>
+                        <p>在人类历史上，第一次预告水星凌日是"行星运动三大定律"的发现者，德国天文学家开普勒(1571至1630年)。他在1629年预言:1631年11月7 日将发生稀奇天象--水星凌日。当日，法国天文学家加桑迪在巴黎亲眼目睹到有个小黑点(水星)在日面上由东向西徐徐移动。从1631年至2003年，共出现50次水星凌日，其中，发生在11月的有35次，发生在5月的仅有15次。每100年，平均发生水星凌日13.4次。</p>
+                        <p>原理水星凌日发生的原理与日食相似。由于水星和地球的绕日运行轨道不在同一个平面上，而是有一个7度的倾角。因此，只有水星和地球两者的轨道处于同一个平面上，而日水地三者又恰好排成一条直线时，在地球上可以观察到太阳上有一个小黑斑在缓慢移动，这种现象称为水星凌日。小黑斑是由于水星挡住了太阳射向地球的一部分光而形成的。</p>
+                        <p>地球每年5月8日前后经过水星轨道的降交点，每年11月10日前后又经过水星轨道的升交点。所以，水星凌日只能发生在这两个日期的前后。</p>
+                        <p>21世纪具体出现时间<br>
+                            日期__________凌始外切__内切_____甚_____凌终内切___外切___最小日心距(角秒)__备注<br>
+
+                            2006 Nov 08____19:12____19:14____21:41____00:08____00:10____422.9____好机会!<br>
+
+                            2016 May 09____11:12____11:15____14:57____18:39____18:42____318.5____只能出国去看<br>
+
+                            2019 Nov 11____12:35____12:37____15:20____18:02____18:04____ 75.9____只能出国去看<br>
+
+                            2032 Nov 13____06:41____06:43____08:54____11:05____11:07____572.1____好机会!<br>
+
+                            2039 Nov 07____07:17____07:21____08:46____10:12____10:15____822.3____好机会!<br>
+
+                            2049 May 07____11:03____11:07____14:24____17:41____17:44____511.8____只能出国去看<br>
+
+                            2052 Nov 09____23:53____23:55____02:29____05:04____05:06____318.7____好机会!大家保重身体<br>
+
+                            2062 May 10____18:16____18:20____21:36____00:53____00:57____520.5____不能出国的，也许是最后一次<br>
+
+                            2065 Nov 11____17:24____17:26____20:06____22:46____22:48____180.7____只能出国去看<br>
+
+                            2078 Nov 14____11:42____11:44____13:41____15:37____15:39____674.3____只能出国去看<br>
+
+                            2085 Nov 07____11:42____11:45____13:34____15:24____15:26____718.5____只能出国去看<br>
+
+                            2095 May 08____17:20____17:24____21:05____00:47____00:50____309.8____祝大家寿比南山!<br>
+
+                            2098 Nov 10____04:35____04:37____07:16____09:56____09:57____214.7____祝大家……吃人参果以后~<br>
+
+                            (注意:表中时刻全为格林尼治时间，北京时间需加8小时)</p>
+                        <h1>冲日</h1>
+                        <p>冲日(英文:opposition)，简称冲，是由地球上观察天体与太阳的位置相差180度，即天体与太阳各在地球的两侧的天文现象，相对于冲日的现象为合日。所谓行星冲日，是指地外行星运行到与太阳、地球形成一条直线的状态。一般来讲，冲日时，行星最亮，也最适宜观测。2013年，天王星的冲日发生在10月3日，整夜可见，视星等为5.7等，肉眼难以分辨，观测时可借助望远镜。</p>
+                        <h2>简介</h2>
+                        <p>冲日依照选择天球座标的不同，可分为黄经冲与赤经冲，而前者为常用冲日</p>
+                        <p>之定义(太阳与天体的黄经相差180°)。冲日前后是观测天体的好时机，因为天体在冲的位置时，当太阳下时天体则刚从东方地平线升起，至午夜时分天体的地平位置最高，至翌日的日出前天体才西下，所以天体整夜皆可见，这时天体与地球的距离也是在一年中最接近，视直径最大，是最亮的(最亮的定义只适用于行星与小行星等)。</p>
+                        <p>因为地球与行星的轨道非正圆之关系，天体在近日点前后的冲较接近地球，亮度也是历次冲日之中最亮的，这个冲即大冲(例如2003年8月下旬的火星大冲)，相对于其他的冲日即称小冲或直接称冲日。理论上除太阳、地球与地球轨道内天体(如内行星等)之外，其余所有天体皆可有冲日现象发生，现多用在太阳系内运行之天体(如外行星、小行星、彗星等)。根据地球与该天体的会合周期，该天体相对于地球在每年有一至两次冲日(绝大部分时间只有一次)，一般天文年历皆有列出各太阳系天体冲日时刻。</p>
+                        <h2>火星冲日</h2>
+                        <p>因为火星在近日点时的表面活跃程度(例如表面沙尘暴)或表面地形均能肉眼可见，火星在人类探索地外文明的重要性之下，而火星冲日相对于其他时候的视直径会大许多以至能清楚看见表面状况，因而火星历次大冲之时，不少天文爱好者(甚至有天文台参与)均以铅笔目视扫描记录表面活跃的现象或者是拍摄的主要对象。从19世纪发现的"火星运河"开始，以摄像头接驳望远镜清晰纪录火星短短几天的尘暴与极冠的变化，也多是在火星大冲的这一段日子完成的。</p>
+                        <h2>分析</h2>
+                        <p>天文学家们把太阳系内的八大行星分为两大类:以地球为基点，一类为地内行星，一类为地外行星。顾名思义，地内行星就是运行轨道在地球以内的行星，包括水星和金星;地外行星是轨道在地球以外的行星，包括火星、木星、土星、天王星和海王星。这两大类行星在空中运行自然大不相同，地内行星的运动有四个特殊时期，分别为下合、上合、东大距和西大距;地外行星的运动也有四个特殊时段，分别为合、冲、东方照和西方照。地外行星才会出现冲日现象，地内行星是绝对不可能发生冲日。所以可以从行星在空中的位置判断它是属于地外或地内。</p>
+                        <p>地外行星在地球轨道以外，当太阳把行星和地球分开180度时，简称"合"，合时，行星与太阳同升同落，掩埋在太阳的光辉中，人们无法观测到。当行星与太阳的黄经相差90度时，称为"方照"--行星在太阳以东叫东方照，在太阳以西叫西方照。如果行星与太阳的黄经相差180度，也就是说，太阳升起时，行星落下，而太阳落下时，行星升起，那么这时就称之为"冲"。冲日是观测行星的最佳时刻。</p>
+                        <h2>天王星冲日</h2>
+                        <p>据北京天文馆天文专家寇文介绍，天王星是一颗远日行星，公转周期较长，大约为84年。它是一颗类似木星的气体行星，有光环，也有众多卫星，其最明显的特征除了淡蓝色的表面外，就是巨大的黄赤交角。天王星的自转轨道平面和公转轨道平面的夹角可达97.8°，基本上是在"躺着"自转。天王星相对背景恒星移动得非常缓慢，几乎每年都有冲日，2013年的冲日发生在10月3日，整夜可见，视星等为5.7等，肉眼难以分辨。观测时可借助望远镜。</p>
+                        <p>专家介绍，天王星距离地球太远，其视面大小的变化平时很难察觉。而天王星每当冲日时，距离地球会比较近，因此，看上去会比其他时刻大一些，最适合观测。</p>
+                        <h2>海王星冲日</h2>
+                        <p>江苏省天文学会专家2009年8月16日介绍，海王星将在8月18日"冲日"。当海王星运行到与太阳黄经相差180度的方位上，天文上称之为"冲日"。这时，太阳落山之际，海王星则从东方地平线上升出。此后的二十多天时间里海王星与地球相距最近，将是天文爱好者观测海王星的最佳时机。海王星正在摩羯座中运行，使用小型天文望远镜的爱好者，若能配上《世纪星图》，将会更容易找到其在天空中的位置，到时不妨一睹"海王"的"风采"。</p>
+                        <p>海王星是最新定义的八颗经典行星中距离太阳最远的，平均距离约为45亿千米，公转周期约为164.8年。由于距离人类非常遥远，海王星也是看上去最暗的行星。</p>
+                        <h1>历史上肉眼可见的超新星爆发</h1>
+                        <p>时间方位视亮度观测、记录者<br>
+
+                            　　185 半人马座比金星亮中国人。<br>
+
+                            　　369 仙后座比木星亮中国人。<br>
+
+                            　　1006 豺狼座比金星亮中国、日本、朝鲜、阿拉伯人。<br>
+
+                            　　1054 金牛座比金星亮中国、日本、阿拉伯、印度人。<br>
+
+                            　　1572 仙后座与金星相同 布拉赫等。<br>
+
+                            　　1604 蛇夫座介于天狼星和木星之间中国人和开普勒、伽利略等。<br> </p>
+                    </div>
+                    <div class="dom_footer" style="background-color: rgba(00,00,00,.4)">
+                        <div class="dom_footer_left"></div>
+                        <div class="dom_footer_right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main_right" style="background-color: rgba(00,00,00,.6)">
+            <div id="tab">
+                <div class="main-header">星空TV:天文奇观</div>
+                <div id="tab-video">
+                    <video class="tab_video" src="video/universe.mp4" controls></video></div>
+            </div>
+            <div id="content">
+                <div class="main-header" id="main-header">新闻：近期特讯</div>
+                <ul class="main_ul">
+                    <p class="ul_p">近期天象</p>
+                    <hr>
+                    <li><a href="" target="_blank">流星雨</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="" target="_blank">月全食</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="" target="_blank">日全食</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="" target="_blank">水星凌日</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="" target="_blank">彗星</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="" target="_blank">其他天象</a><audio src="music/mouseover.mp3"></audio></li>
+                    <p class="ul_p">天文模拟软件</p>
+                    <hr>
+                    <li><a href="http://stellarium.org/" target="_blank">Stellarium</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="http://universesandbox.com/" target="_blank">Universe Sandbox</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="http://spaceengine.org/" target="_blank">SpaceEngine</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="http://spaceengine.org/" target="_blank">SkySafari</a><audio src="music/mouseover.mp3"></audio></li>
+
+                </ul>
+                <div id="main-footer">
+                    <div class="main-header" id="main-header2">文章：近期事件</div>
+                    <ul class="footer_ul">
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="" target="_blank">#</a><audio src="music/mouseover.mp3"></audio></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div id="footer">
+        <div id="footer-r">
+            <h1><a href="#">Contact us</a></h1>
+            <a href="#"><img class="picture" src="images/weixin.png" alt="" width="27px" height="27px" /></a>
+            <a href="#"><img class="picture" src="images/photo.png" alt="" width="27px" height="27px" /></a>
+            <a href="#"><img class="picture" src="images/computer.png" alt="" width="27px" height="27px" /></a>
+        </div>
+        <div id="footer-l">
+            <h1><a href="record.html" target="_blank">原创@Jack Cheng</a></h1>
+            <a href="https://www.nasa.gov/" target="_blank"><img class="picture" src="images/nasa.gif" alt="" width="70px" height="35px" /></a>
+        </div>
+    </div>
+</div>
+</div>
+<script src="javascript/myFunc.js"></script>
+<script>
+    window.onload=function () {
+
+//1..触碰发音
+        var nav=$("nav");
+        var allLis=nav.children;
+
+        for(var i=1;i<allLis.length;i++){
+
+            allLis[i].onmouseover=function () {
+
+                this.children[1].play();
+                this.children[1].currentTime=0;
+            }
+        }
+
+//键盘发音
+// var key=[65,83,68,70,74,75,76];
+        document.onkeydown=function (event) {
+            var e=event||window.event;
+
+            var keyCode=e.keyCode-49;
+
+            allLis[keyCode].children[1].play();
+            allLis[keyCode].children[1].currentTime=0;
+        };
+
+        var buttons=document.getElementsByTagName("button");
+        for(var i=0;i<buttons.length;i++){
+
+            buttons[i].onmouseover=function () {
+
+                this.children[0].play();
+                this.children[0].currentTime=0;
+            }
+        }
+
+
+        var main_left_header=$("main_left_header");
+        var allLis=main_left_header.getElementsByTagName("li");
+
+        for(var i=0;i<allLis.length;i++){
+
+            allLis[i].onmouseover=function () {
+
+                this.children[1].play();
+                this.children[1].currentTime=0;
+            }
+        }
+
+        var content=$("content");
+        var Lis=content.getElementsByTagName("li");
+
+        for(var i=0;i<Lis.length;i++){
+
+            Lis[i].onmouseover=function () {
+
+                this.children[1].play();
+                this.children[1].currentTime=0;
+            }
+        }
+
+
+//2.轮播图
+        var slider=$("slider");
+        var slider_main=$("slider_main");
+        var slider_main_img=slider_main.children;
+        var slider_ctl=slider.children[1];
+        var iNow=0;
+
+//动态创建指示器
+        for(var i=0;i<slider_main_img.length;i++){
+            var span=document.createElement("span");
+            span.className="slider_ctl_icon";
+            span.t=slider_main_img.length-i-1;
+            slider_ctl.insertBefore(span,slider_ctl.children[1]);
+        }
+
+//第一个选中
+        slider_ctl.children[1].className="slider_ctl_icon current";
+
+// 让滚动内容归位
+        var scroll_w=slider.offsetWidth;
+        for(var j=1;j<slider_main_img.length;j++){
+            slider_main_img[j].style.left=scroll_w+'px';
+        }
+
+//遍历监听操作
+        var slider_ctl_child=slider_ctl.children;
+        for(var i=0;i<slider_ctl_child.length;i++){
+            slider_ctl_child[i].onmousedown=function () {
+                if(this.className==="slider_ctl_prev"){
+
+                    buffer(slider_main_img[iNow],{"left":scroll_w});
+                    iNow--;
+                    if(iNow<0){
+                        iNow=slider_main_img.length-1;
+                    }
+                    slider_main_img[iNow].style.left=-scroll_w+'px';
+                    buffer(slider_main_img[iNow],{"left":0});
+
+
+                }else if(this.className==="slider_ctl_next"){
+
+                    autoPlay();
+                }else{
+
+                    var index=parseInt(this.t);
+                    if(index>iNow){
+                        buffer(slider_main_img[iNow],{"left":scroll_w});
+
+                        slider_main_img[index].style.left=-scroll_w+'px';
+
+                    }else if(index<iNow){
+                        buffer(slider_main_img[iNow],{"left":-scroll_w});
+
+                        slider_main_img[index].style.left=scroll_w+'px';
+                    }
+                    iNow=index;
+                    buffer(slider_main_img[iNow],{"left":0});
+                }
+                changeIndex();
+            }
+        }
+
+//切换索引
+        function changeIndex() {
+            for(var i=1;i<slider_ctl_child.length-1;i++){
+                slider_ctl_child[i].className="slider_ctl_icon";
+
+            }
+
+            slider_ctl_child[iNow+1].className="slider_ctl_icon current";}
+
+
+
+//自动播放
+
+        var timer=setInterval(autoPlay,5000);
+        function autoPlay() {
+
+            buffer(slider_main_img[iNow],{"left":-scroll_w});
+            iNow++;
+            if(iNow>=slider_main_img.length){
+                iNow=0;
+            }
+            slider_main_img[iNow].style.left=scroll_w+'px';
+            buffer(slider_main_img[iNow],{"left":0});
+
+            changeIndex();
+        }
+
+//设置清除定时器
+        slider.onmouseover=function () {
+            clearInterval(timer);
+        };
+
+        slider.onmouseout=function () {
+            timer=setInterval(autoPlay,5000);
+        };
+
+//3.Tab选项卡
+        var allLis=$('main_left_header').getElementsByTagName("li");
+        var allDom=$('main_left_content').getElementsByClassName("dom");
+
+        for(var i=0;i<allLis.length;i++){
+            var li=allLis[i];
+            li.index=i;
+
+            li.onmousedown = function () {
+
+                for(var j=0;j<allLis.length;j++){
+                    allLis[j].className="main_left_img";
+                    allDom[j].style.display="none";
+                }
+
+                this.className="main_left_img selected";
+                allDom[this.index].style.display="block";
+            }
+        }
+
+    };
+</script>
+</body>
+</html>

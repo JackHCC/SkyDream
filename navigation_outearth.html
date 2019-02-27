@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地外生命</title>
+    <link rel="stylesheet" href="css/chushihua.css">
+    <style>
+        body{
+            background:url("images/bg13.jpg");
+            background-repeat:no-repeat;
+            background-size:100% 100%;
+            background-attachment:fixed;
+            position: relative;
+        }
+        /*header*/
+        #top{
+
+            top: 0;
+            height: 60px;
+            width: 100%;
+
+        }
+        #logo{
+
+            width: 200px;
+            height:60px;
+            margin: 10px 10px;
+            float: left;
+
+        }
+        #logo img{
+            margin-top: 6px;
+            margin-left: 0px;
+            opacity: 1;
+            float:left;
+        }
+        #logo p{
+            float:right;
+            color:white;
+            margin-right: 10px;
+            font-size: 15px;
+            margin-top: 10px;
+            height: 18px;
+            opacity: 1;
+        }
+        #header{
+
+            width: 850px;
+            height:60px;
+            margin: 10px 10px;
+            float: left;
+        }
+        #nav img{
+            float: left;
+            opacity: 1;
+        }
+        #nav li{
+
+            width:80px;
+            float:left;
+            margin-right: 25px;
+            margin-top: 14px;
+
+        }
+        #nav li a{
+            font-size: 18px;
+            line-height: 28px;
+            font-family: '微软雅黑';
+            color:white;
+            display: block;
+            height:40px;
+            width:80px;
+            opacity: 1;
+            text-decoration: none;
+        }
+        #nav a:hover{
+            color:#A8A5A5;
+            font-weight:bold ;
+
+        }
+        #signin{
+            /*background: white;*/
+            width: 150px;
+            height:60px;
+            margin-left: 30px;
+            margin-top: 10px;
+            float:left;
+
+        }
+        #signin .sign{
+            font-size: 20px;
+            float: left;
+            height: 40px;
+            width: 60px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #signin .sign:hover{
+            transform: scale(1.1);
+            opacity: 0.7;
+        }
+
+        #signin #l{
+            background-color: white;
+            color: #000000;
+        }
+
+        #signin #r{
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /*header*/
+
+        /*main*/
+        /*轮播图*/
+
+        .slider{
+            width: 950px;
+            height: 535px;
+            position: relative;
+            margin: 30px auto;
+            /*background-color: red;*/
+            overflow: hidden;
+        }
+
+        .slider_scroll{
+            width: 950px;
+            height: 500px;
+            position: relative;
+        }
+
+        .slider_main{
+            width: 1900px;
+            height: 500px;
+            background-color: black;
+        }
+
+        .slider_main_img{
+            width: 950px;
+            height: 500px;
+            position: absolute;
+        }
+
+        .slider_main_img img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider_ctl{
+            cursor: pointer;
+        }
+        .slider_ctl_prev,.slider_ctl_next{
+            /*background: #fff;*/
+            /*width: 30px;*/
+            /*height: 30px;*/
+            border: 15px solid #fff;
+            border-radius: 50%;
+            opacity: 0.6;
+            position: absolute;
+            top: 50%;
+            margin-top: -35px;
+        }
+        .slider_ctl_prev{
+            left: 5px;
+
+        }
+
+        .slider_ctl_next{
+
+            background-position: -9px -45px;
+            right: 5px;
+        }
+
+        .slider_ctl_icon{
+            border:10px solid gray;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 7px 10px;
+
+            float: left;
+        }
+        .slider_ctl:nth-child(2){
+            margin-left: 400px;
+        }
+
+
+        .current{
+            border-color: #cccccc;
+        }
+        /*轮播图*/
+
+
+        #main{
+            width: 100%;
+            height: 2200px;
+            /*background-color: blue;*/
+            margin: 0 auto;
+            position: absolute;
+            top: 640px;
+        }
+        #main_left{
+            width: 64%;
+            height: 2150px;
+            float: left;
+            margin: 15px 10px;
+            /*background-color: gray;*/
+            border:1px solid #ffffff;
+        }
+
+        #main_left_header{
+            width: 98%;
+            height: 156px;
+            /*background-color: black;*/
+            float: left;
+            margin: 8px;
+        }
+        #main_left_header ul li{
+            width: 22%;
+            height: 140px;
+            background-color: #ffffff;
+            margin-left: 12px;
+            margin-top: 3px;
+            float: left;
+            border:4px solid #ffffff;
+            opacity:0.9;
+            filter: alpha(opacity=90);
+            border-radius: 4px;
+        }
+        #main_left_header ul li:hover{
+            transform: scale(1.05);
+
+        }
+        #main_left_header ul .selected{
+            opacity:1;
+            filter: alpha(opacity=100);
+        }
+        #main_left_header img{
+            width: 100%;
+            height: 100%;
+        }
+
+        #main_left_content{
+            width: 98%;
+            height: 1960px;
+            /*background-color: black;*/
+            border: 1px solid #ffffff;
+            float: left;
+            margin: 8px;
+            overflow: hidden;
+        }
+        .dom{
+            border: 1px solid #ffffff;
+            /*opacity: 0.2;*/
+        }
+
+        .dom .dom_banner{
+            height: 400px;
+            width: 96%;
+            border: 1px solid #ffffff;
+            margin: 15px auto;
+        }
+        .dom .dom_banner img{
+            height: 100%;
+            width: 100%;
+        }
+        .dom .dom_arti{
+            height: 1200px;
+            width: 96%;
+            border: 1px solid #ffffff;
+            margin: 15px auto;
+            overflow: scroll;
+            overflow-x: hidden;
+            /*background-color: #999999;*/
+        }
+        .dom .dom_arti h1{
+            font-size:25px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            color: #ffffff;
+            letter-spacing: 10px;
+        }
+        .dom .dom_arti button{
+            float: right;
+            font-size: 18px;
+            background-color: gray;
+            color: #ffffff;
+            margin-right: 20px;
+        }
+        .dom .dom_arti button:hover{
+            transform: scale(1.2);
+        }
+        .dom .dom_arti h2{
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 26px;
+            color: #BFBBBB;
+            letter-spacing: 6px;
+            text-align: left;
+            text-indent: 2em;
+        }
+        .dom .dom_arti p{
+            font-size: 12px;
+            line-height: 24px;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-align: justify;
+            padding:10px 20px;
+            text-indent: 2em;
+        }
+        .dom .dom_footer{
+            height: 300px;
+            width: 96%;
+            border: 1px solid #ffffff;
+            margin: 15px auto;
+        }
+        .dom .dom_footer .dom_footer_left{
+            height: 96%;
+            width: 25%;
+            margin: 5px 20px;
+            /*border: 1px solid #ffffff;*/
+            float: left;
+        }
+        .dom .dom_footer .dom_footer_left video{
+            height: 100%;
+            width: 100%;
+        }
+        .dom .dom_footer .dom_footer_right{
+            height: 96%;
+            width: 65%;
+            border: 1px solid #ffffff;
+            margin: 5px 10px;
+            float: left;
+        }
+        #dom1{
+            width: 100%;
+            height: 100%;
+            /*background-color: yellow;*/
+        }
+        #dom2{
+            width: 100%;
+            height: 100%;
+            /*background-color: green;*/
+        }
+        #dom3{
+            width: 100%;
+            height: 100%;
+            /*background-color: blue;*/
+        }
+        #dom4{
+            width: 100%;
+            height: 100%;
+            /*background-color: white;*/
+        }
+        .dom .dom_footer .dom_footer_right h1{
+            font-size:20px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 50px;
+            letter-spacing: 10px;
+            color: #ffffff;
+        }
+        .dom .dom_footer .dom_footer_right li a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .dom .dom_footer .dom_footer_right li:hover{
+            transform: scale(1.1);
+        }
+        .dom .dom_footer .dom_footer_right li{
+            font-size:15px;
+            text-align: center;
+            line-height: 20px;
+            letter-spacing: 3px;
+            color: #ffffff;
+            height: 30px;
+            width: 96%;
+            margin: 5px auto;
+            float: left;
+
+        }
+
+        #main_right{
+            width: 32%;
+            height: 2150px;
+            float: right;
+            margin: 15px 10px;
+            /*background-color: gray;*/
+            border:1px solid #ffffff;
+        }
+        #main_right #tab{
+            width: 94%;
+            height: 270px;
+            /*border: 1px solid #ffffff;*/
+            margin: 25px 11px;
+            float: left;
+        }
+        #main_right  .main-header{
+            width: 100%;
+            height: 25px;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            color: #ffffff;
+        }
+        #main_right  #content #main-header{
+            margin-top: 12px;
+        }
+        #main_right  #main-footer #main-header2{
+            margin-top: 12px;
+        }
+        #main_right  #content .main_ul{
+            width: 96%;
+            height: 760px;
+            margin-top: 5px;
+            margin-left: 6px;
+            border: 1px solid #ffffff;
+            float: left;
+        }
+        #main_right  #content .main_ul li{
+            width: 80%;
+            height: 25px;
+            font-size: 16px;
+            line-height: 25px;
+            margin: auto;
+            margin-top: 24px;
+            text-align: center;
+        }
+        #main_right  #content .main_ul li a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        #main_right  #content li a:hover{
+            color:#cccccc;
+            font-size: 18px;
+        }
+        #main_right  #content .main_ul .ul_p{
+            width: 100%;
+            height: 25px;
+            font-size: 20px;
+            line-height: 25px;
+            margin-top: 24px;
+            text-align: center;
+            color: #BFBBBB;
+        }
+        hr{
+            width: 60%;
+            text-align: center;
+
+        }
+        #main_right #main-footer {
+            width: 96%;
+            height: 840px;
+            margin-top: 20px;
+            margin-left: 6px;
+            /*border: 1px solid #ffffff;*/
+            float: left;
+
+        }
+        #main_right #main-footer ul{
+            width: 96%;
+            height: 940px;
+            margin-top: 5px;
+            margin-left: 6px;
+            border: 1px solid #ffffff;
+            float: left;
+        }
+        #main_right #main-footer li{
+            width: 70%;
+            height: 25px;
+            font-size: 16px;
+            line-height: 25px;
+            margin: auto;
+            margin-top: 24px;
+
+            text-align: center;
+        }
+        #main_right #main-footer li a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        #main_right #tab #tab-video{
+            width: 96%;
+            height: 210px;
+            margin-top: 15px;
+            margin-left: 6px;
+            border: 1px solid #ffffff;
+        }
+        #main_right #tab #tab-video .tab_video{
+            width: 100%;
+            height: 210px;
+            float: left;
+        }
+
+        #main_right #content{
+            width: 94%;
+            height: 1800px;
+            /*border: 1px solid #ffffff;*/
+            margin: 11px;
+            float: left;
+        }
+        /*main*/
+
+        /*footer*/
+        #footer{
+            width: 100%;
+            height: 80px;
+            position: absolute;
+            top: 2840px;
+            margin: auto;
+            /*background-color: #fff;*/
+        }
+        #footer-l{
+
+            width: 340px;
+            height:60px;
+            margin-left: 20px;
+            margin-top: 10px;
+            float:left;
+        }
+        #footer-l h1{
+            font-size: 15px;
+            font-weight: bold;
+            margin: 15px 15px;
+            color: aliceblue;
+            float: left;
+            color: #ffffff;
+        }
+        #footer-r{
+
+            width: 240px;
+            height:60px;
+            margin-left: 20px;
+            margin-top: 10px;
+            float:right;
+        }
+        #footer-r h1{
+            font-size: 15px;
+            font-weight: bold;
+            margin: 15px 10px;
+            float: left;
+
+        }
+        .picture{
+            float:left;
+            margin-top: 10px;
+            margin-right: 15px;
+        }
+
+        #footer-l h1 a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        #footer-r h1 a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+        #footer-r h1 a,#footer-l h1 a:hover{
+            color: gray;
+        }
+        /*footer*/
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <!--header-->
+    <div id="top">
+        <div id="logo">
+            <a href="#"><img src="images/logo.png" width="95px" height="45px" alt="" />
+                <p>梦想点缀星空<br> 星空美化未来</p></a>
+        </div>
+        <div id="header">
+            <ul id="nav">
+                <img src="images/pic.png" alt="" width="85px" height="65px" />
+                <li><a href="index.html">首页</a><audio src="music/A%205.mp3"></audio></li>
+                <li><a href="navigation_kepu.html">宇宙科普</a><audio src="music/B%205.mp3"></audio></li>
+                <li><a href="navigation_star.html" >星球星系</a><audio src="music/C%205.mp3"></audio></li>
+                <li><a href="navigation_bhole.html" >黑洞理论</a><audio src="music/D%205.mp3"></audio></li>
+                <li><a href="#" >地外生命</a><audio src="music/E%205.mp3"></audio></li>
+                <li><a href="navigation_more.html" >最新时讯</a><audio src="music/F%205.mp3"></audio></li>
+                <li><a href="navigation_aboutme.html" >关于我们</a><audio src="music/G%205.mp3"></audio></li>
+            </ul>
+        </div>
+        <div id="signin">
+            <button id="l" class="sign">注册<audio src="music/tune.mp3"></audio></button>
+            <button id="r" class="sign">登录<audio src="music/tune.mp3"></audio></button>
+        </div>
+    </div>
+
+    <!--main-->
+    <div id="slider" class="slider">
+        <div id="slider_scroll" class="slider_scroll">
+            <div class="slider_main" id="slider_main">
+                <div class="slider_main_img"><a href=""><img src="images/nav_oe_banner1.jpg" width="950px" height="
+500px"></a></div>
+                <div class="slider_main_img"><a href=""><img src="images/nav_oe_banner2.jpg" width="950px" height="
+500px"></a></div>
+                <div class="slider_main_img"><a href=""><img src="images/nav_oe_banner3.jpg" width="950px" height="
+500px"></a></div>
+                <div class="slider_main_img"><a href=""><img src="images/nav_oe_banner4.jpg" width="950px" height="
+500px"></a></div>
+            </div>
+        </div>
+        <div class="slider_ctl" id="slider_ctl">
+            <span class="slider_ctl_prev"></span>
+
+            <span class="slider_ctl_next"></span>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="main_left">
+            <div id="main_left_header">
+                <ul>
+                    <li class="main_left_img selected" ><img src="images/header13.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                    <li class="main_left_img"><img src="images/header16.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                    <li class="main_left_img"><img src="images/header15.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                    <li class="main_left_img"><img src="images/header14.png" alt=""><audio src="music/mouseover.mp3"></audio></li>
+                </ul>
+            </div>
+            <div id="main_left_content" style="background-color: rgba(00,00,00,.6)">
+                <div class="dom" id="dom1" style="display: block">
+                    <div class="dom_banner"><img src="images/bg11.jpg" alt=""></div>
+                    <div class="dom_arti" id="dom_arti">
+                        <h1>地外生命</h1>
+                        <button>阅读模式<audio src="music/tune.mp3"></audio></button>
+                        <h2>研究途经</h2>
+                        <p>截止2013年，限于科学水平的发展，科学家们对地外生命的研究途径尚比较有限。其中之一是将实验仪器送入其它行星，但这种方法有局限，无法大量开展。还有一种想法是，假设宇宙中存在具备相同或超过我们这样水平的智能生物，通过电波与其联系。可是由于可能的文明距离我们至少也有几十光年，若能收到回复，也已是百年以后，这是很不现实的。因此，我们不能单纯通过通讯手段，而应借助于实验手段。我们虽没有一个切实的实验方法说明生命是物质演化的必然结果，但如果物理和化学规律是宇宙中的规律，而且我们在实验中精确回溯了生命在地球上存在的途径，就可以使人更有理由相信宇宙中也存在生命。</p>
+                        <h2>化学特性</h2>
+                        <p>多年来，科学家推测地外生命存在的可能性，并进行了搜索，但仍没有探测到地外生命的存在。科学家假定，地外生命的化学特性必须具备:1、适合于化学反应的介质;2、原子物质在宇宙中普遍存在并有不稳定结构。地外生物学或地外生命的研究，就是在银河系的行星及卫星中调查生命存在的可能性。长期以来人们想象火星为有生命的行星，但经过几次人类探测器登陆火星，这个想象被打破了。从20世纪60年代初，天文学家就尽力向被假定技术先进的文明世界发射探索信号。如波多黎各的阿雷西博天文台的305米的阿瑞斯波射电望远镜，功率大到可使距离1000光年的远处接收到发射信号。同样，哈勃望远镜可以观测到太阳系外的恒星及行星的电磁谱线。通过光谱分析，天文学家可以测定大气分子的温度、类型和丰度，并可依据地球上所知推测某些天体上生命所必需的元素。最广泛的正在进行的计划是美国地外智能的探索(SETI)，它集中接收并分析来自宇宙空间的信号。</p>
+                        <h2>地外生命</h2>
+                        <p>按照人类已掌握的知识来认识地外生命，是一种科学的探索。我们不能抛开知识体系去任意想象。比如，我们不能说有一种生物可以在太阳上生活。现有的知识告诉我们:生命不可能在恒星上形成，但生命的诞生、存在和发展又绝对离不开由恒星的光和热所提供的能源。因此，生命出现的第一个条件必然是在恒星周围要有行星存在。通常认为恒星是由气体尘埃云坍缩而形成的。如果密度很低的原始星云在自身引力作用下收缩，逐渐变为一个自转着的扁平圆盘，那么中央主要部分因密度增大、温度升高发生热核反应而形成恒星，周围的薄盘就有可能形成行星系统。</p>
+                        <h2>地外智慧生命</h2>
+                        <p>美国国家航空航天局日前宣称，地外生命探索工程已取得巨大进展，在目前发现的2000多颗类地行星中，一些行星存在生命痕迹，这意味着人类有望在今后20年内发现地外生命，在30年内或找到地外智慧生命(俗称"外星人")。</p>
+                        <p>寻找地外智慧生命，其实早已脱离了科幻小说的范畴，成为一项严肃的科学探索。早在1960年，美国天文学家弗兰克·德雷克在美国西弗吉尼亚的国家射电天文台，就开始了人类历史上第一次有目的、有组织地在银河系里寻找地外智慧生命的"奥兹玛计划"。从那时起，各种监测地外智慧生命信号的计划便从未停止过。</p>
+                        <p>除了采取"被动监测"的方式寻找地外智慧生命外，科学家还尝试主动联系它们。要进行这一活动，首先遇到的无疑是"语言"的问题。科学家们一直猜测，数学语言可能是每个文明的共同语言。美国天文学家、科普作家卡尔·萨根在他的专著《宇宙联系》中表示，宇宙中的技术文明无论差异多大，都有一种共同的语言--数学语言。中国数学家、语言学家周海中也指出，数学语言具有科学性、准确性、简洁性、抽象性和普适性等特点，是宇宙交际的理想工具。因此，数学语言就成了人类与地外智慧生命联系的首选媒介。美国加州"地外文明搜索研究所"的科学家们正计划将维基百科的全部内容编译成数学语言信息，通过射电望远镜发送至20光年以外的太空，并希望地外智慧生命能接收到这些信息，借此了解地球文明。此外，科学家们还尝试用图像、音乐、发送实物等方式，尝试与地外智慧生命取得联系。</p>
+                        <p>英国物理学家史蒂芬·霍金对地外智慧生命的存在也深信不疑。但他警告，人类主动与它们联系或许会招来灾祸。尽管如此，不少科学家还是乐观自信、积极主动地寻找地外智慧生命，如美国天文学家赛斯·肖斯塔克最近就表示，我们应争取主动与它们建立友好关系，同时加快寻找它们的步伐，寻找的过程比获得的结果更有意义。</p>
+                        <p>寻找地外智慧生命是人类探索未知世界的过程，也是人类认知宇宙和生命的过程。如果找到地外智慧生命，那将是科学史上最重大的发现之一。不过，人类是否已经做好准备，接受来自宇宙另一端的"邻居"?这其实也是一个需要人类思考的问题。</p>
+                    </div>
+                    <div class="dom_footer">
+                        <div class="dom_footer_left"><video src="video/video4.mp4" controls></video></div>
+                        <div class="dom_footer_right">
+                            <h1>推荐书籍——在线阅读</h1>
+                            <ul>
+                                <li><a href="pdf/yuhzoujianshi.pdf">宇宙简史——霍金</a></li>
+                                <li><a href="pdf/shijianjianshi.pdf">时间简史：图解</a></li>
+                                <li><a href="pdf/dabaozha.pdf">大爆炸探秘</a></li>
+                                <li><a href="pdf/21tianwenxue.pdf">21世纪天文学</a></li>
+                                <li><a href="pdf/jijianyuzhou.pdf">极简宇宙</a></li>
+                                <li><a href="pdf/yanshenyuzhou.pdf">延伸的宇宙</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dom" id="dom2">
+                    <div class="dom_banner"><img src="images/nav_kepu_banner3.jpg" alt=""></div>
+                    <div class="dom_arti">
+                        <h1>地外探索</h1>
+                        <h2>简介</h2>
+                        <p>1959年，莫里森和可可尼在自然杂志上提出，如果存在地外文明社会，当前的人类科学已经具有与地外文明社会单方面通讯的能力，并且论证了如何利用电磁波与地外文明通讯的问题，对当时的学术界提出了地外文明探索的看法，从而开始了地外文明探索。<br>
+                            1960年，德拉克等人利用美国国家射电天文台的射电望远镜，首次实施地外文明探索计划，这项计划被称为奥兹玛计划。<br>
+                            60年代以来，对离地球最近的500 颗星进行了监测，但尚未发现来自天体的 人工信号。 1973 年发射的先锋11号宇宙探测器上装配了包括人体形象和太阳系组成的行星以及100 多张地球文明和风景的幻灯片，记录在镶金铜版上的各种语言和音乐，音响此物为SETI计划负责人伟大的Kall Sagan博士的妻子设计。在 8 万年后，先锋号离太阳系约3 光年，也许会遇上在星际航行的地外智能生物，并被它们捕获为礼品。1984 年国际天文学联合会的专门组织首举行了地外文明问题讨论会，并对90年代的进一步探索地外文明问题定出了研究计划。<br>
+                            1974年11月16日，美国利用设在波多黎各的阿雷西博305米直径的射电望远镜，发出人类第一组信号，对准武仙座球状星团，发射3分钟。50多年来，科学家们除了采取被动的方法来监听外星人发送的信号外，还通过各种方式主动联系它们。如何联系它们?科学界主流认为，这就必须与外星人进行宇宙交际。要进行这一活动，首先遇到的无疑是“语言”的问题。意大利哲学家、天文学家伽利略曾说过：“数学是上帝用来书写宇宙的文字”。基于这种理念，卡尔萨根深信,宇宙中的技术文明无论差异多大,都有一种共同的语言——数学语言。中国数学家、语言学家周海中在1999年发表的经典文章《宇宙语言学：一门新兴的边缘学科》中指出，数学语言具有准确性、简洁性、抽象性、逻辑性、普适性、形式化等特点，是宇宙交际的理想工具。<br></p>
+                        <h2>历史沿革</h2>
+                        <p>外星文明探索简称为SETI（Search for Extra-Terrestrial Intelligence），它已成为地球人类的重大研究课题。我们知道，波兰天文学家哥白尼（N.Copernicus, 1473-1543）于1543年出版了著作《天体运行论》，指出太阳是一颗恒星，地球和其他行星绕日作圆周运动。这一理论被普遍接受后，人们认识到地球只是一颗普通的行星，绝非宇宙的中心。那么，在类似的演化条件下，宇宙中某些地方也可能有智慧生命存在；德国天文学家开普勒（J.Kepler, 1571-1630）即持这种观点。</p>
+                        <p>1979年，I.Asimov推测银河系中可居住行星多达6.4亿个，因此即使只有万分之一行星有高级生命，数量也非常可观。美国宇航局（NASA）的科学家则估计，宇宙中约有1023个恒星，而银河系中约有2×1011个恒星系统。银河系中的2000亿颗恒星中大约有10% 拥有巨大的、很容易发现的行星；看起来很有可能其余恒星中的大多数周围也有行星存在。这些行星中一定会有类似地球的星体。事实上，地球上的智者早就对“外星智慧生命是否存在”的问题表示关心了。</p>
+                        <p>1820年，德国著名数学家F.Gauss提出，可在西伯利亚的森林里找出一片直角三角形的空地，然后在三角形里种上麦子，以三角形的每条边为底边种上一片正方形的松树，这就组成了勾股定理（Pythagoras定理）的证明图，如果有外星人路过地球附近，看到这个巨大的数学图形，便知道这里有智慧生物居住了。</p>
+                        <p>然而，真正有价值的、使用现代仪器的探索开始于20世纪60年代。 1960年4月8日，美国人Frank Drake将一副直径25米的射电天文望远镜指向了太空中两颗附近的行星—— εEridani和τCeti。他的目标很明确，那就是寻找来自地球以外智能生命的讯息。</p>
+                        <p>后来，他使用西弗吉尼亚的10个大型射电望远镜，接收宇宙中的无线电信号并进行分析，寻找1.42GHZ附近的有规律信号。这个叫做OZMA计划的活动标志着一个新研究领域的诞生：寻找地外智慧生命。F.Drake是St.Cruse加州大学的天体物理学教授，兼任外星智能调查所的所长。该所位于旧金山以南55km，监听频率为1~3GHz的频段（这里的背景噪声最低）。由于自1993年美国国会宣布不再支持原来的研究计划，该所一度面临困境；后来由于私人捐助才坚持下来。现在他们的工作称为“凤凰计划”（Project Phonix），并且与澳大利亚科学家合作，在那里有先进的射电天文设备和波谱分析仪以及大型计算机。</p>
+                        <p>早期进行研究的还有美国哈佛大学的Paul Horowitz教授。从20世纪60年代起，他领导了“太空多通道分析”计划，它在800万个频道（每个宽0.05Hz）上，用巨型射电望远镜探测太空，对收到的信号作自动分析。</p>
+                        <h2>探索方法</h2>
+                        <p>①接收并分析来自太空的各种可能的电波。这方面的工作从1960年就开始了。</p>
+                        <p>②人类主动向外太空发出表明人类在太阳系内存在的信号。1974年11月16日，美国利用设在波多黎各的阿雷西博305米直径的射电望远镜，发出人类第一组信号，对准武仙座球状星团，发射3分钟。</p>
+                        <p>③发射探测器去登门拜访外星人。美国发射的“先驱者”10号和11号，“旅行者”1号和2号，都在完成对太阳系内的探测任务后，带着许多人类的信息，作为人类使者，漫游在恒星际空间。如果巧遇人类的知音，他们将从探测器中了解人类的活动，确定进一步交往的可能。由此可见，探索地外文明是一项综合性的科学使命，过于乐观是不现实的，过于悲观也是没有根据的。</p>
+                        <h2>理论依据</h2>
+                        <p>一、20世纪以前的世界多元论与世界一元论：20世纪以前，关于外星文明的探讨争论主要停留在哲学领域，没有什么比较具体的科学理论。争论的双方可以简单概括为世界多元论与世界一元论。多元论认为象人类这样的文明世界宇宙中有许多个，一元论者则相反，认为人类是宇宙的独生子。</p>
+                        <p>二、哥白尼原理：十六世纪波兰天文学家哥白尼提出“日心说”，推翻“地心说”，这一学说不仅是天文学上的一场革命，也是人类思想史上的一次革命。它深深改变了我们对自身位置所在的根本看法。由哥白尼的日心说精髓，科学家提出了所谓哥白尼原理。这个原理认为，地球不是宇宙的中心，地球人类也不享有在时间或空间中的优先地位。由此理所当然地证明，生命现象和文明现象并非地球唯一 ，而是在宇宙普遍存在，我们不可妄自尊大。</p>
+                        <p>三、星际通讯理论：要实现与外星文明的联系交流，方式有两种：一是星际航行，二是星际通讯。前者显然过于遥远，而后者无疑要容易得多，但需要确立一套正确的理论。迄今一无所获。有科学家认为，无线电通讯可能还是太原始了，外星文明使用的是某种不为我们所知的先进通讯方式。</p>
+                        <p>四、德雷克的“宇宙文明方程式”：在所有分析判断外星文明发生的机率和可能性理论中，美国天文学家弗兰克·德雷克于1961年提出的"宇宙文明方程式"，也就是德雷克方程，无疑最为著名，也最富科学价值了。</p>
+                        <p>五、“人择原理”和维仑金平凡原理：人择宇宙学原理（简称人择原理）由鲍罗和泰伯拉提出。这条原理很复杂，但简而言之，即谓正是人类的存在，才能解释我们这个宇宙的种种特性，包括各个基本自然常数。因为宇宙若不是这个样子，就不会有我们这样的智慧生命来谈论他。</p>
+                        <p>六、宇宙文明三阶梯论：宇宙中普遍存在文明社会，而各个文明社会之间则决不会处于同一水平线上，他们无疑会呈现出多层次性、多元性。因为宇宙已存在上百亿年，而地球年龄不到它的一半。人类文明充其量也不过上万年的历史。</p>
+                        <p>七、宇宙文明传播假说：瑞士学者埃里希˙冯˙丹尼肯因出版《众神之车》、《人类，外星人的子孙》等书而名声大噪，也因此背上了“伪科学”的恶名。丹尼肯的主要观点是，人类并非自然进化的产物，而是来自地外文明。地球人是外星人的子孙。地球上各民族早期关于“上帝”、“神”的形象来源于“外星人”。</p>
+                        <p>八、多四季理论：多四季理论的提出者并非高院或研究所的专业科学家，而是名普通的工程师，这就注定了这个理论信受冷落，甚至讥为“伪科学”的遭遇。不过，这并不影响我将其视为关于外星文明重要理论之一的基本估价。</p>
+                        <p>九、“活以太”与宇宙生命多元论：地外智慧生命如果存在，会处于何种形态与形式呢？绝大多数科学家都是以地球生命为蓝本进行推测。正如美国天文学家、著名的太阳系外行星搜索者巴特勒指出：宇宙其他地方的生命很可能必须建立在碳和水的基础上。否则，我们所有的推测将失去依据。</p>
+                        <p>十、“宇宙沉默”与“动物园假设”：坚信地外智慧生命存在的科学家常常会遇到这样的诘难：既然存在先进的外星人，为什么不与我们接触？这个问题，被称为“宇宙沉默”或“心理真空”问题。研究探索者们对此有许多回答，其中有一种很有趣的假说，叫“动物园假设”。按照这种理论，外星人确已从遥远的某地观察到了地球的人类但他们与地球人类之间存在着巨大的文明差异。</p>
+
+                    </div>
+                    <div class="dom_footer">
+                        <div class="dom_footer_left"></div>
+
+                        <div class="dom_footer_right">
+                            <h1>推荐书籍——在线阅读</h1>
+                            <ul>
+                                <li><a href="pdf/yuhzoujianshi.pdf">宇宙简史——霍金</a></li>
+                                <li><a href="pdf/shijianjianshi.pdf">时间简史：图解</a></li>
+                                <li><a href="pdf/dabaozha.pdf">大爆炸探秘</a></li>
+                                <li><a href="pdf/21tianwenxue.pdf">21世纪天文学</a></li>
+                                <li><a href="pdf/jijianyuzhou.pdf">极简宇宙</a></li>
+                                <li><a href="pdf/yanshenyuzhou.pdf">延伸的宇宙</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dom" id="dom3">
+                    <div class="dom_banner"><img src="images/bg9.jpg" alt=""></div>
+                    <div class="dom_arti">
+                        <h1>科幻艺术</h1>
+
+
+                    </div>
+                    <div class="dom_footer">
+                        <div class="dom_footer_left"></div>
+                        <div class="dom_footer_right">
+                            <h1>推荐书籍——在线阅读</h1>
+                            <ul>
+                                <li><a href="pdf/yuhzoujianshi.pdf">宇宙简史——霍金</a></li>
+                                <li><a href="pdf/shijianjianshi.pdf">时间简史：图解</a></li>
+                                <li><a href="pdf/dabaozha.pdf">大爆炸探秘</a></li>
+                                <li><a href="pdf/21tianwenxue.pdf">21世纪天文学</a></li>
+                                <li><a href="pdf/jijianyuzhou.pdf">极简宇宙</a></li>
+                                <li><a href="pdf/yanshenyuzhou.pdf">延伸的宇宙</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dom" id="dom4">
+                    <div class="dom_banner"><img src="images/bg7.jpg" alt=""></div>
+                    <div class="dom_arti">
+                        <h1>未解之谜</h1>
+                        <h2>1.“Wow（哇）”讯号</h2>
+                        <p>1977年，俄亥俄州立大学的大耳射电望远镜曾一直监听深层太空中的信号。“大耳朵”则是在1963年建造，目的是为了监听恒星发出的宽频无线电信号，但在1973年，它被转变为SETI(搜寻地球外智慧生命)来使用，并开始在天空中寻找更具体的窄频信号，对于我们来说，这些信号可能意味着智慧生命的存在。然而，在上世纪70年代，对传入的无线电信号的分析并不具体详实（主要是记录频率、信号强度和频宽），不过到了1977年，研究分析和仪器设备在当时已经足够完善和充分，且可以让科研操作人员掌握跟以往不一样、有趣的研究结果。</p>
+                        <p>1977年8月，天文学家杰瑞伊曼正在通过“大耳朵”研究计算机打印输出的信号时，他偶然发现了一系列的数字和字母（最终，这些数字后来变得很出名），像6EQUJ5，也就是大名鼎鼎的“Wow”讯号，其似乎是没有任何危害,但连同其他数据,它就代表了大约1420兆赫的连续窄频信号,当伊曼在纸上看到这一序列时，他很惊喜地把它圈了起来，立即在空白处写道:“Wow哇！”，随即该讯号也因此而得名。</p>
+                        <p>多年来，伊曼和其他一些人反复地搜索信号，并试图为其存在提供更能让人理解的说明。但是，在排除了航空器、小行星、反射地面信号、星际霹雳作为替代来源之后，他们唯一无法排除的解释就是外星智慧生物。</p>
+                        <h2>2.1991 VG</h2>
+                        <p>1991年，美国天文学家詹姆斯斯科蒂在天空中发现了一些奇怪的东西。从他的第一次观察中，他预测了这个物体会再次出现在那里，但是当他用望远镜看向那个位置时，却未能发现这个物体。奇怪的是，后来，他只是偶然在观察中才又瞥见了它。</p>
+                        <p>当他根据事实推理的时候，他意识到这个奇怪的物体在绕着太阳旋转并且和地球的轨道非常相似。这对于一个自然物体来说是相当罕见的，因为空间距离和万有引力通常会扰乱它的轨道，并会将它送上新的轨道。唯一可行的解释，就是这些物体曾为冷战时期向太空发射的各种太空残余，比如土星5号，或者一些俄罗斯的太空硬件。但是，当这个物体的轨迹在1973年前后被标绘成最后近地时，不可思议的事情发生了，它与那个时代的任何已知发射都没能匹配上，这使得整个事情成为了一个谜。后来有的研究者猜测可能是一个外星太空探测器。</p>
+                        <h2>3.黑洞时空旅行</h2>
+                        <p>2012年，美国宇航局（十有八九）发现了一个巨大的黑洞从星系中“脱离”开，科学家观察到它以“每小时几百万英里”的速度疾驰而过，就像被“扔出来”那般，想到如此巨大的黑洞却发生这样的现象，这就变得很奇怪了。正如领导发现黑洞这项研究的天文学家弗朗西斯卡西瓦诺解释的那样，这个黑洞比太阳大数百万倍，而这个星系只是把它“打包发送了”出去。</p>
+                        <p>关于这是如何发生的，科学家有一些理论，尽管没有一个是被证实的。西瓦诺和她的团队推论：两个星系(和每个星系中的黑洞)合并了;由此产生的引力波使这个现在单一的“洞”产生了强劲的推动力，使它能够“脱离开来”。与此同时，另一种理论为涉及三个超大质量黑洞相互碰撞，其中最轻的一个被踢出了整体结构。目前的数据能支持引力波理论，但没有任何证据能够证明巨大的、无形的物体在太空中超急速穿行。</p>
+                        <h2>4.ASASSN-15lh</h2>
+                        <p>超新星爆炸是人类见证过的最大爆炸之一，就像大多数的大爆炸一样。下面介绍的就是asassn-15lh的例子，这是一颗在2015年6月首次观测到的超新星，它源于28亿光年之外。</p>
+                        <p>让asassn-15lh与众不同的是，科学家们无法对其全面完整地解释。与普通的超新星不同，asassn-15lh的亮度是10倍，而且威力更大。而且，当天文学家分析它发出的光时，他们竟然无法找到氢存在的证据。不过，也存在一种最佳的解释：一种被称为磁星的磁性中子星，它通过快速旋转和强大的磁场，可以为不断膨胀的过热气体提供额外的能量。然而没有多久，asassn-15lh释放的能量要比磁星所能提供的要多，而且它还在继续运行。</p>
+                        <p>但奇怪的事情并没有就此止步。通常超新星的表现包括一道明亮的闪光，然后是缓慢的消退。虽然asassn-15lh最初也是在这样的过程中开始运行的，但几个月后它开始消退，紫外线又开始增加。对于超新星来说，这并不是完全未知的行为，但是射线光并不符合通常的状况。科学家们仍然对此无法完全解释。</p>
+                        <h2>5.编号KIC 8462852</h2>
+                        <p>KIC 8462852是一颗距离地球约1400光年的天鹅座中的恒星。不像在轨道上有颗恒星那样，这颗恒星的亮度下降了20%，而且它们绝对不正常。一种解释是，一团彗星碎片在恒星周围形成了紧密的轨道，但另一种理论提出了更令人担忧的问题。</p>
+                        <p>1960年，物理学家弗里曼·戴森提出了一种理论，认为智慧的外星文明可能会发展到一个需要比单一星球产生更多能量的程度。他的理论是，这样一个先进的文明可能会建造一个叫做“戴森球体”的巨大的轨道结构，其能够获得其中系统恒星很大一部分的太阳能量，并使其大部分受用。这样的“巨型结构”将捕获大多数恒星的可见光，但仍会发射一些红外线辐射，利用此点，因此而识别。但上述仅仅是停留在理论之上，科学家们也无法对此解释清楚……</p>
+                        <h2>6.巨引源</h2>
+                        <p>巨引源位于一个被天文学家称之为“回避带”的区域中，很讽刺的是，我们无法回避它。之所以无法躲避，是因为它正好位于银河系最密集部分的另一边，因此通过所有的恒星和大量的太空尘埃云来观察它几乎是不可能的。尽管如此，天文学家们已经将一些仪器转向了巨引源的方向，并确定在该地区有一堆以前未被发现的星系，但仍然没有足够强说服力的解释。</p>
+                        <h2>7.暗能量</h2>
+                        <p>1998年，哈勃望远镜发现宇宙膨胀的速度比以前快得多。从那以后，NASA一直在努力弄明白为什么。他们之后掌握了一些理论，就像NASA所称的“充满空间的能量流体。”虽然这种“能量流”还没有被证实，但他们仍然把它称为“暗能量”。</p>
+                        <p>那么什么是“暗能量”呢?其实科学家们真的不知道。事实上，我们所能确定的是，它比光能有更多的能量。美国国家航空航天局估计，宇宙暗能量约为68%。暗能量的“表兄”，像是神秘的“暗物质”，占了宇宙的27%。剩下的5%则是“光”能量。</p>
+                        <p>爱因斯坦地心引力理论的一部分涉及到了一个“宇宙常数”，即看似真空的空间里充满了它自己的能量。这种能量将由空间产生，因此当宇宙膨胀并创造更多的空间时，额外的能量将使宇宙的移动速度更快。但是既然我们不知道空间是如何形成自己的能量，那这就又成为了另一个未经证实的理论而已。</p>
+                        <h2>8.宇宙将如何终结？</h2>
+                        <p>几乎可以肯定的是，地球终将会死亡，因为那时太阳会膨胀成一个红巨星，它会将其烧焦。然而，更不确定的是，宇宙本身何时会死亡，以及如何死亡。我们唯一能确定的是，未来它将会发生。</p>
+                        <p>据报道，一些科学家认为宇宙将会在“热寂”中毁灭，而“热寂”将会使不同物体间的热量差异变为零。一切都是由于热量的不同而起运转，那么统一的温度就意味着什么都不会起作用了。最终，热量本身就会死亡，整个宇宙将会在绝对零度以上的温度(-459.67华氏度)中冻结。</p>
+                        <p>还有就是“大挤压”理论，认为宇宙将会继续膨胀，直到它膨胀了不能再膨胀。然后，所有的东西都会收缩，坍塌到自己的内部，形成一堆非常热的物质，就像宇宙大爆炸之前一样。还有一种“大变动”理论，即暗能量的泡沫会吞噬我们的宇宙，它们会在分子水平上改变物质，使所有的东西都变得不适宜，甚至形成不了原子。或者宇宙“大撕裂”，暗能量会膨胀，变得更大，把银河撕成碎片?我们没有证据证明宇宙会以这样的方式结束，所以魔王象希望不要“亲临”这一天的到来。</p>
+                        <h2>9.伽马射线爆发</h2>
+                        <p>伽马暴(GRBs)并不经常发生，而且考虑到它们基本上是巨大的、超长的能量爆炸(最近一次是2013年的GRB 130427A，持续了20个小时)，这反而是一件好事。然而，他们的“稀缺”意味着我们对其的了解并不多，即使有一天我们可能会因此而灭亡。</p>
+                        <p>我们不知道GRB到底是什么，也不知道它们是怎么发生的。正如航天局解释的那样，GRB可能是由低能量的伽马射线引起的，一旦暴露在太空中，就会爆发高能射线。一项2014年的研究显示，频繁的GRB爆炸让宇宙中的大片区域完全不适宜居住。该研究还说，在地球的历史上，可能至少有一次大规模灭绝事件。虽然我们可能不会有后续的GRB，但这仍然只能算作是“可能”。</p>
+                        <h2>10.波江星座超巨洞</h2>
+                        <p>在对宇宙微波背景进行的一项调查中，第一次发现了波江星座超巨洞的存在。宇宙微波背景是宇宙早期的电磁残留物，在太空中仍在呼啸而过。当科学家仔细观察时，他们注意到了一个“冷点”在波江星座的方向上。随后的观测发现，波江星座超巨洞是一个出乎意料的巨大且非常空洞的空间，其直径约为10亿光年。其他的时空空洞已经被发现，尽管这个超巨洞是如此之大以至于不能用现在的宇宙理论来解释，这也很令人堪忧啊。</p>
+                        <p>尽管如此，科学家们还是很喜欢提出新的理论，其中的一些却非常有创意。最直截了当的想法是，存在着一个超级、超级、超大质量的黑洞，它的质量是由成千上万个星系组合而成。在一定程度上其将有能力吸收所有的恒星、行星、尘埃、光、暗物质和宇宙微波背景辐射，并在每一次吸收中变得越来越强大。</p>
+                        <h2>11.僵尸恒星</h2>
+                        <p>2014年8月，美国国家航空航天局宣布发现了一颗恒星系统，然而同时，该系统也成为了超新星爆炸的牺牲品，随即科学家就对这颗恒星命名为了SN 2012Z。通常情况下，当恒星发生超新星时，就意味着其已经毁灭了，但在这种情况下，科学家们却发现该系统的一颗小恒星的一部分可能是作为一种僵尸恒星而幸存了下来。如果这是真的，这很可能是因为超新星威力太弱。爆炸会损坏一颗无法修复的恒星，但不会彻底摧毁它，留下的就是一颗“僵尸恒星”。目前还没有正式确认这类僵尸恒星的存在，但这是对一些恒星如何被炸成碎片的最好解释。</p>
+                        <p>另外一个称为“僵尸恒星”的理由是:当它们在吃其他的恒星时，它们会表现出“嘶吼”。美国国家航空航天局解释到，一些看起来已经灭亡的恒星会发出高能x射线很可能是它们的“嚎叫”或“尖叫”。如果这还不够怪异，他们就会“尖叫”，同时吸走附近其他恒星的能量，实质上是在享用它们。但是航天局还不知道他们是如何发射这些x射线的，他们只考虑了它们的灭亡。</p>
+                        <h2>12.暗流</h2>
+                        <p>可观测到的宇宙大约有900亿光年，但专家认为整个宇宙至少还要再大250倍。很明显，一些东西正在影响着我们所能看到的银河系。</p>
+                        <p>2008年，美国宇航局的一个太空团队在遥远的星系团中发现了奇怪的、意想不到的宇宙运动。这些运动似乎是把这些星系从我们所能看到的任何地方发射出去。团队的首席科学家不确定是什么导致了这些奇怪的宇宙运动，而且看起来似乎也并没有什么可观察到的。所以他的理论是超出了我们可以看到控制这些集群力量，这就是“暗流”。一个看不见的力量把整个星系拉进一个我们甚至都看不到的神秘空间。令人惊奇的是，我们不仅不知道“暗流”是什么，我们甚至不确定它是否存在。</p>
+                        <h1>扩展阅读（地球未解之谜）</h1>
+                        <p>1.宇宙由什么构成?<br>2.意识的生物学基础是什么?<br>3.为什么人类基因会如此之少?<br>4.遗传变异与人类健康的相关程度如何?<br>5.物理定律能否统一?6.人类寿命到底可以延长多久?<br>7.是什么控制着器官再生?<br>8.皮肤细胞如何成为神经细胞?<br>9.单个体细胞怎样成为整株植物?<br>10.地球内部如何运行?<br>11.地球人类在宇宙中是否独一无二?<br>12.地球生命在何处产生、如何产生?<br>13.什么决定了物种的多样性?<br>14.什么基因的改变造就了独特的人类?<br>15.记忆如何存储和恢复?<br>16.人类合作行为如何发展?<br>17.怎样从海量生物数据中产生大的可视图片?<br>18.化学自组织的发展程度如何?<br>19.什么是传统计算的极限?<br>20.我们能否有选择地切断某些免疫反应?<br>21.量子不确定性和非局部性背后是否有更深刻的原理?<br>22.能否研制出有效的HIV疫苗?<br>23.温室效应会使地球温度达到多高?<br>24.什么时间用什么能源可以替代石油?<br>25.地球到底能负担多少人口?<br>26.宇宙是否唯一?<br>27.是什么驱动宇宙膨胀?<br>28.第一颗恒星与星系何时产生、怎样产生?<br>29.超高能宇宙射线来自何处?<br>30.是什么给类星体提供动力?<br>31.黑洞的本质是什么?<br>32.正物质为何多于反物质?<br>33.质子会衰减吗?<br>34.重力的本质是什么?<br>35.时间为何不同于其他维度?<br>36.是否存在比夸克更小的基本粒子?<br>37.中微子是其自己的反粒子吗?<br>38.是否有解释所有相关电子系统的统一理论?<br>39.人类能够制造最强的激光吗?<br>40.能否制造完美的光学透镜?<br>41.是否可能制造出室温下的磁性半导体?<br>42.什么是高温超导性之后的成对机制?<br>43.能否发展关于湍流动力学和颗粒材料运动学的综合理论?<br>44.是否存在稳定的高原子量元素?<br>45.固体中是否有超流动性?如果有，如何解释?<br>46.水的结构如何?<br>47.玻璃态物质的本质是什么?<br>48.是否存在合理化学合成的极限?<br>49.光电电池的最终效率如何?<br>50.核聚变将最终成为未来的能源吗?<br>51.驱动太阳磁周期的原因是什么?<br>52.行星怎样形成?<br>53.是什么引发了冰期?<br>54.使地球磁场逆转的原因是什么?<br>55.是否存在有助于预报的地震先兆?<br>56.太阳系的其他星球上现在和过去是否存在生命?<br>57.自然界中手性原则的起源是什么?<br>58.能否预测蛋白质折叠?<br>59.人体中的蛋白质有多少存在方式?<br>60.蛋白质如何发现其作用对象?<br>61.细胞死亡有多少种形式?<br>62.是什么保持了细胞内的通行顺畅?<br>63.为什么细胞的成分可以独立于DNA而自行复制?<br>64.基因组中功能不同于RNA的角色是什么?<br>65.基因组中端粒和丝粒的作用是什么?<br>66.为什么一些基因组很大，另一些又相当紧凑?<br>67.基因组中的“垃圾”(“junk”)有何作用?<br>68.新技术能使DNA测序的成本降低多少?<br>69.器官和整个有机体如何了解停止生长的时间?<br>70.除了继承突变，基因组如何改变?<br>71.在胚胎期，不对称现象是如何确定的?<br>72.翼、鳍和面孔如何发育进化?<br>73.是什么引发了青春期?<br>74.干细胞是否位于所有肿瘤的中心?<br>75.肿瘤更容易通过免疫进行控制吗?<br>76.肿瘤的控制比治愈是否更容易?<br>77.炎症是所有慢性疾病的主要原因吗?<br>78.疯牛病会怎样发展?<br>79.脊椎动物在多大程度上依赖先天免疫系统来抵抗传染病?<br>80.对抗原而言，免疫记忆需要延长暴露吗?<br>81.为什么孕妇的免疫系统不拒绝其胎儿?<br>82.什么与有机体的生物钟同步?<br>83.迁徙生物怎样发现其迁移路线?<br>84.为什么要睡眠?<br>85.人类为什么会做梦?<br>86.语言学习为什么存在临界期?<br>87.信息素影响人类行为吗?<br>88.一般麻醉剂如何发挥作用?<br>89.导致精神分裂症的原因是什么?<br>90.引发孤独症的原因是什么?<br>91.阿兹海默症患者的生命能够延续多久?<br>92.致瘾的生物学基础是什么?<br>93.大脑如何建立道德观念?<br>94.通过计算机进行学习的极限是什么?<br>95.有多少个性源于遗传?<br>96.性别倾向的生物学根源是什么?9<br>7.生命树是生命之间系统关系最好的表达方式吗?<br>98.地球上有多少物种?<br>99.什么是物种?<br>100.横向转移为什么会发生在众多的物种中以及如何发生?<br>101.谁是世界的共同祖先?<br>102.植物的花朵如何进化?<br>103.植物怎样制造细胞壁?<br>104.如何控制植物生长?<br>105.为什么所有的植物不能免疫一切疾病?<br>106.外界压力环境下，植物的变异基础是什么?<br>107.是什么引起物质消失?<br>108.能否避免物种消亡?<br>109.一些恐龙为什么如此庞大?<br>110.生态系统对全球变暖的反应如何?<br>111.至今共有多少人种，他们之间有何关联?<br>112.是什么提升了现代人类的行为?<br>113.什么是人类文化的根源?<br>114.语言和音乐演化的根源是什么?<br>115.什么是人种，人种如何进化?<br>116.为什么一些国家向前发展，而有些国家的发展停滞?<br>117.政府高额赤字对国家利益和经济增长速度有什么影响?<br>118.政治与经济自由密切相关吗?<br>119.为什么改变撒哈拉地区贫困状态的努力几乎全部失败?<br>120.有没有简单的方法确定椭圆曲线是否存在无穷多解?<br>121.霍奇闭链是代数闭链的和吗?<br>122.数学家将会最终给出Navier-Stokes方程的解吗?<br>123.庞加莱实验能否确定4维空间的球?<br>124.黎曼zeta函数的零解都有a+bi形式吗?<br>125.对粒子物理标准模型的研究是否会停止在量子Yahg-Mills理论上<br></p>
+
+                    </div>
+                    <div class="dom_footer" style="background-color: rgba(00,00,00,.4)">
+                        <div class="dom_footer_left"></div>
+                        <div class="dom_footer_right">
+                            <h1>推荐书籍——在线阅读</h1>
+                            <ul>
+                                <li><a href="pdf/yuhzoujianshi.pdf">宇宙简史——霍金</a></li>
+                                <li><a href="pdf/shijianjianshi.pdf">时间简史：图解</a></li>
+                                <li><a href="pdf/dabaozha.pdf">大爆炸探秘</a></li>
+                                <li><a href="pdf/21tianwenxue.pdf">21世纪天文学</a></li>
+                                <li><a href="pdf/jijianyuzhou.pdf">极简宇宙</a></li>
+                                <li><a href="pdf/yanshenyuzhou.pdf">延伸的宇宙</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main_right" style="background-color: rgba(00,00,00,.6)">
+            <div id="tab">
+                <div class="main-header">星空TV:宇宙文明等级知多少？</div>
+                <div id="tab-video">
+                    <video class="tab_video" src="video/alien.mp4" controls></video></div>
+            </div>
+            <div id="content">
+                <div class="main-header" id="main-header">探索:视觉盛宴</div>
+                <ul class="main_ul">
+                    <p class="ul_p">经典纪录片链接</p>
+                    <hr>
+                    <li><a href="https://www.bilibili.com/video/av7191895?from=search&seid=873389980853417386" target="_blank">纪录片：地外文明——bilibili</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/video/av7335989?from=search&seid=17988147260734364509" target="_blank">科幻纪录片：远古外星人——bilibili</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/video/av2379517?from=search&seid=17988147260734364509" target="_blank">远古外星人第一季——bilibili</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/video/av2377288?from=search&seid=15348507572935098726" target="_blank">远古外星人第六季——bilibili</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="http://goudidiao.com/?url=https://v.qq.com/x/cover/si2jeox32n0ik1q.html" target="_blank">电影：ET外星人</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="http://www.iqiyi.com/w_19rr1s2a4p.html" target="_blank">科学探索：宇宙未解之谜——爱奇艺</a><audio src="music/mouseover.mp3"></audio></li>
+                    <p class="ul_p">精品短片分享</p>
+                    <hr>
+                    <li><a href="https://www.bilibili.com/video/av2871480?from=search&seid=6852178469033542614" target="_blank">12分钟看完科幻神作《三体》——bilibili</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/video/av25942268?from=search&seid=1173707750092838801" target="_blank">通过太空垃圾寻找生命</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/video/av2485824?from=search&seid=9372087710845199787" target="_blank">TED：探索地外文明</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="https://www.bilibili.com/video/av16227127?from=search&seid=9372087710845199787" target="_blank">如何探索地外文明</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="" target="_blank">11</a><audio src="music/mouseover.mp3"></audio></li>
+                    <li><a href="" target="_blank">12</a><audio src="music/mouseover.mp3"></audio></li>
+
+                </ul>
+                <div id="main-footer">
+                    <div class="main-header" id="main-header2">开拓：理论物理</div>
+                    <ul class="footer_ul">
+                        <li><a href="https://baike.baidu.com/item/%E5%BC%A6%E7%90%86%E8%AE%BA" target="_blank">弦理论</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%96%9B%E5%AE%9A%E8%B0%94%E7%9A%84%E7%8C%AB/554903" target="_blank">薛定谔的猫</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%B4%B9%E7%B1%B3%E6%82%96%E8%AE%BA" target="_blank">费米悖论</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E9%BB%91%E6%9A%97%E6%A3%AE%E6%9E%97%E6%B3%95%E5%88%99" target="_blank">黑暗森林法则</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%B6%85%E8%B7%9D%E4%BD%9C%E7%94%A8/11019237" target="_blank">超距作用</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%BC%95%E5%8A%9B%E6%B3%A2/726380" target="_blank">引力波</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E7%AC%AC%E5%9B%9B%E6%80%81" target="_blank">第四态</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E7%AC%AC%E4%BA%94%E6%80%81" target="_blank">第五态</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%B4%B9%E7%B1%B3%E5%AD%90%E5%87%9D%E8%81%9A%E6%80%81" target="_blank">费米子凝聚态</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E9%87%8D%E5%8A%9B%E9%94%81%E7%9C%BC" target="_blank">重力锁眼</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0/1714985" target="_blank">量子纠缠</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%A4%A7%E7%BB%9F%E4%B8%80%E7%90%86%E8%AE%BA/98421" target="_blank">大统一理论</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%AE%87%E5%AE%99%E5%85%A8%E6%81%AF%E8%AE%BA" target="_blank">宇宙全息论</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%99%9A%E6%97%B6%E9%97%B4" target="_blank">虚时间</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E8%B6%85%E8%86%9C%E7%90%86%E8%AE%BA" target="_blank">超膜理论</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E7%BF%98%E6%9B%B2%E7%A9%BA%E9%97%B4" target="_blank">翘曲空间</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%B9%B3%E8%A1%8C%E5%AE%87%E5%AE%99/69962" target="_blank">平行宇宙</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E9%A9%AC%E8%B5%AB%E5%8E%9F%E7%90%86" target="_blank">马赫原理</a><audio src="music/mouseover.mp3"></audio></li>
+                        <li><a href="https://baike.baidu.com/item/%E5%9C%B0%E5%A4%96%E6%96%87%E6%98%8E" target="_blank">地外文明</a><audio src="music/mouseover.mp3"></audio></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div id="footer">
+        <div id="footer-r">
+            <h1><a href="#">Contact us</a></h1>
+            <a href="#"><img class="picture" src="images/weixin.png" alt="" width="27px" height="27px" /></a>
+            <a href="#"><img class="picture" src="images/photo.png" alt="" width="27px" height="27px" /></a>
+            <a href="#"><img class="picture" src="images/computer.png" alt="" width="27px" height="27px" /></a>
+        </div>
+        <div id="footer-l">
+            <h1><a href="record.html" target="_blank">原创@Jack Cheng</a></h1>
+            <a href="https://www.nasa.gov/" target="_blank"><img class="picture" src="images/nasa.gif" alt="" width="70px" height="35px" /></a>
+        </div>
+    </div>
+</div>
+</div>
+<script src="javascript/myFunc.js"></script>
+<script>
+    window.onload=function () {
+
+//1..触碰发音
+        var nav=$("nav");
+        var allLis=nav.children;
+
+        for(var i=1;i<allLis.length;i++){
+
+            allLis[i].onmouseover=function () {
+
+                this.children[1].play();
+                this.children[1].currentTime=0;
+            }
+        }
+
+//键盘发音
+// var key=[65,83,68,70,74,75,76];
+        document.onkeydown=function (event) {
+            var e=event||window.event;
+
+            var keyCode=e.keyCode-49;
+
+            allLis[keyCode].children[1].play();
+            allLis[keyCode].children[1].currentTime=0;
+        };
+
+        var buttons=document.getElementsByTagName("button");
+        for(var i=0;i<buttons.length;i++){
+
+            buttons[i].onmouseover=function () {
+
+                this.children[0].play();
+                this.children[0].currentTime=0;
+            }
+        }
+
+
+        var main_left_header=$("main_left_header");
+        var allLis=main_left_header.getElementsByTagName("li");
+
+        for(var i=0;i<allLis.length;i++){
+
+            allLis[i].onmouseover=function () {
+
+                this.children[1].play();
+                this.children[1].currentTime=0;
+            }
+        }
+
+        var content=$("content");
+        var Lis=content.getElementsByTagName("li");
+
+        for(var i=0;i<Lis.length;i++){
+
+            Lis[i].onmouseover=function () {
+
+                this.children[1].play();
+                this.children[1].currentTime=0;
+            }
+        }
+
+
+//2.轮播图
+        var slider=$("slider");
+        var slider_main=$("slider_main");
+        var slider_main_img=slider_main.children;
+        var slider_ctl=slider.children[1];
+        var iNow=0;
+
+//动态创建指示器
+        for(var i=0;i<slider_main_img.length;i++){
+            var span=document.createElement("span");
+            span.className="slider_ctl_icon";
+            span.t=slider_main_img.length-i-1;
+            slider_ctl.insertBefore(span,slider_ctl.children[1]);
+        }
+
+//第一个选中
+        slider_ctl.children[1].className="slider_ctl_icon current";
+
+// 让滚动内容归位
+        var scroll_w=slider.offsetWidth;
+        for(var j=1;j<slider_main_img.length;j++){
+            slider_main_img[j].style.left=scroll_w+'px';
+        }
+
+//遍历监听操作
+        var slider_ctl_child=slider_ctl.children;
+        for(var i=0;i<slider_ctl_child.length;i++){
+            slider_ctl_child[i].onmousedown=function () {
+                if(this.className==="slider_ctl_prev"){
+
+                    buffer(slider_main_img[iNow],{"left":scroll_w});
+                    iNow--;
+                    if(iNow<0){
+                        iNow=slider_main_img.length-1;
+                    }
+                    slider_main_img[iNow].style.left=-scroll_w+'px';
+                    buffer(slider_main_img[iNow],{"left":0});
+
+
+                }else if(this.className==="slider_ctl_next"){
+
+                    autoPlay();
+                }else{
+
+                    var index=parseInt(this.t);
+                    if(index>iNow){
+                        buffer(slider_main_img[iNow],{"left":scroll_w});
+
+                        slider_main_img[index].style.left=-scroll_w+'px';
+
+                    }else if(index<iNow){
+                        buffer(slider_main_img[iNow],{"left":-scroll_w});
+
+                        slider_main_img[index].style.left=scroll_w+'px';
+                    }
+                    iNow=index;
+                    buffer(slider_main_img[iNow],{"left":0});
+                }
+                changeIndex();
+            }
+        }
+
+//切换索引
+        function changeIndex() {
+            for(var i=1;i<slider_ctl_child.length-1;i++){
+                slider_ctl_child[i].className="slider_ctl_icon";
+
+            }
+
+            slider_ctl_child[iNow+1].className="slider_ctl_icon current";}
+
+
+
+//自动播放
+
+        var timer=setInterval(autoPlay,5000);
+        function autoPlay() {
+
+            buffer(slider_main_img[iNow],{"left":-scroll_w});
+            iNow++;
+            if(iNow>=slider_main_img.length){
+                iNow=0;
+            }
+            slider_main_img[iNow].style.left=scroll_w+'px';
+            buffer(slider_main_img[iNow],{"left":0});
+
+            changeIndex();
+        }
+
+//设置清除定时器
+        slider.onmouseover=function () {
+            clearInterval(timer);
+        };
+
+        slider.onmouseout=function () {
+            timer=setInterval(autoPlay,5000);
+        };
+
+//3.Tab选项卡
+        var allLis=$('main_left_header').getElementsByTagName("li");
+        var allDom=$('main_left_content').getElementsByClassName("dom");
+
+        for(var i=0;i<allLis.length;i++){
+            var li=allLis[i];
+            li.index=i;
+
+            li.onmousedown = function () {
+
+                for(var j=0;j<allLis.length;j++){
+                    allLis[j].className="main_left_img";
+                    allDom[j].style.display="none";
+                }
+
+                this.className="main_left_img selected";
+                allDom[this.index].style.display="block";
+            }
+        }
+
+    };
+</script>
+</body>
+</html>
